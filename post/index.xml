@@ -7,7 +7,60 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>爱莉希雅</copyright>
-        <lastBuildDate>Sat, 07 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Elysia492.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Elysia492.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Elysia01</title>
+        <link>https://Elysia492.github.io/p/elysia01/</link>
+        <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://Elysia492.github.io/p/elysia01/</guid>
+        <description>&lt;img src="https://Elysia492.github.io/p/elysia01/elysia.jpg" alt="Featured image of post Elysia01" /&gt;&lt;p&gt;1：Linux组成&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314160352853.png&#34;
+	width=&#34;623&#34;
+	height=&#34;437&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314160352853_hu2020016650727585040.png 480w, https://Elysia492.github.io/p/elysia01/index.assets/image-20260314160352853_hu7564228882465846847.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260314160352853&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;142&#34;
+		data-flex-basis=&#34;342px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2：Linux发行版本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314161000041.png&#34;
+	width=&#34;1179&#34;
+	height=&#34;862&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314161000041_hu13836463634636788368.png 480w, https://Elysia492.github.io/p/elysia01/index.assets/image-20260314161000041_hu15237249208120248871.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260314161000041&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;136&#34;
+		data-flex-basis=&#34;328px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;核心掌握
+&lt;ol&gt;
+&lt;li&gt;Debian&lt;/li&gt;
+&lt;li&gt;Ubuntu&lt;/li&gt;
+&lt;li&gt;红帽&lt;/li&gt;
+&lt;li&gt;CentOS&lt;/li&gt;
+&lt;li&gt;中标麒麟&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Elysia</title>
         <link>https://Elysia492.github.io/p/elysia/</link>
         <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
@@ -236,47 +289,6 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description>
-        </item>
-        <item>
-        <title></title>
-        <link>https://Elysia492.github.io/p/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Elysia492.github.io/p/</guid>
-        <description>&lt;p&gt;1：Linux组成&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/elysia01.assets/image-20260314160352853.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260314160352853&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;2：Linux发行版本&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/elysia01.assets/image-20260314161000041.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260314161000041&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;核心掌握
-&lt;ol&gt;
-&lt;li&gt;Debian&lt;/li&gt;
-&lt;li&gt;Ubuntu&lt;/li&gt;
-&lt;li&gt;红帽&lt;/li&gt;
-&lt;li&gt;CentOS&lt;/li&gt;
-&lt;li&gt;中标麒麟&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
         </item>
         
     </channel>
