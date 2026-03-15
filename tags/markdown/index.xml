@@ -7,14 +7,154 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>爱莉希雅</copyright>
-        <lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Elysia492.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Elysia492.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Elysia02</title>
+        <link>https://Elysia492.github.io/p/elysia02/</link>
+        <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://Elysia492.github.io/p/elysia02/</guid>
+        <description>&lt;img src="https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8903.jpg" alt="Featured image of post Elysia02" /&gt;&lt;h2 id=&#34;1ip地址&#34;&gt;1.ip地址
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141103418.png&#34;
+	width=&#34;1053&#34;
+	height=&#34;585&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141103418_hu3759457654291579976.png 480w, https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141103418_hu11209815731884202356.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260315141103418&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;432px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2端口&#34;&gt;2.端口
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141305896.png&#34;
+	width=&#34;1069&#34;
+	height=&#34;728&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141305896_hu4655075692166612528.png 480w, https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141305896_hu12949531898887928897.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260315141305896&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141359398.png&#34;
+	width=&#34;943&#34;
+	height=&#34;228&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141359398_hu5995878794443792860.png 480w, https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141359398_hu6456918141004657450.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260315141359398&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;413&#34;
+		data-flex-basis=&#34;992px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3连接服务器&#34;&gt;3.连接服务器
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ip地址&lt;/li&gt;
+&lt;li&gt;端口&lt;/li&gt;
+&lt;li&gt;用户名&lt;/li&gt;
+&lt;li&gt;密码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4连接失败排障流程&#34;&gt;4.连接失败排障流程
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;检查道路是否通畅——ping ip地址或域名&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有时间就通，超时不通&lt;/p&gt;
+&lt;p&gt;解决：nmtui检查网卡—&amp;gt;虚拟网络编辑器&amp;mdash;&amp;gt;打开任务管理器，将Vmware服务开启.&lt;/p&gt;
+&lt;p&gt;​     还不行的话。。。后面再说&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;是否劫财劫色&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;防火墙，selinux&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;是否提供服务&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本质上检测端口是否开启&lt;/p&gt;
+&lt;p&gt;telnet   ip地址或域名  端口号&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;connection failed               连接失败&lt;/li&gt;
+&lt;li&gt;connection established      连接建立&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;5linux命令行详解&#34;&gt;5.linux命令行详解
+&lt;/h2&gt;&lt;p&gt;[root@elysia ~]#&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;linux命令行结构：[用户名@主机名 当前所在目录] 提示符&lt;/p&gt;
+&lt;p&gt;root : 用户    elysia：主机名   ~：当前位置   #表示用户身份  #是root用户  $是普通用户&lt;/p&gt;
+&lt;p&gt;linux命令格式：&lt;/p&gt;
+&lt;p&gt;命令   选项   参数&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;6linux基础操作与命令&#34;&gt;6.Linux基础操作与命令
+&lt;/h2&gt;&lt;h3 id=&#34;1linux快捷键&#34;&gt;1.Linux快捷键
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ctrl+a 移到行首&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ctrl+e 移到行尾&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ctrl+u 光标到行首内容剪切&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ctrl+k 光标到行尾内容剪切&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ctrl+l 清屏&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ctrl+c 取消当前命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2linux关机重启命令&#34;&gt;2.Linux关机重启命令
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;关机&lt;/th&gt;
+&lt;th&gt;shutdown&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;重启&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;shutdown  -r /reboot&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;7linux一切从根开始目录结构&#34;&gt;7.Linux一切从根开始目录结构
+&lt;/h2&gt;</description>
+        </item>
+        <item>
         <title>Elysia01</title>
         <link>https://Elysia492.github.io/p/elysia01/</link>
         <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Elysia492.github.io/p/elysia01/</guid>
-        <description>&lt;img src="https://Elysia492.github.io/p/elysia01/elysia.jpg" alt="Featured image of post Elysia01" /&gt;&lt;p&gt;1：Linux组成&lt;/p&gt;
-&lt;blockquote&gt;
+        <description>&lt;img src="https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8901.jpg" alt="Featured image of post Elysia01" /&gt;&lt;h1 id=&#34;第一天学习&#34;&gt;第一天学习
+&lt;/h1&gt;&lt;h3 id=&#34;1linux组成&#34;&gt;1：Linux组成
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314160352853.png&#34;
 	width=&#34;623&#34;
 	height=&#34;437&#34;
@@ -30,8 +170,8 @@
 	
 &gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;2：Linux发行版本&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;h3 id=&#34;2linux发行版本&#34;&gt;2：Linux发行版本
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314161000041.png&#34;
 	width=&#34;1179&#34;
 	height=&#34;862&#34;
