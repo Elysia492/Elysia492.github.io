@@ -7,7 +7,295 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>爱莉希雅</copyright>
-        <lastBuildDate>Sun, 15 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Elysia492.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Elysia492.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Elysia03</title>
+        <link>https://Elysia492.github.io/p/elysia03/</link>
+        <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://Elysia492.github.io/p/elysia03/</guid>
+        <description>&lt;img src="https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8902.jpg" alt="Featured image of post Elysia03" /&gt;&lt;h2 id=&#34;1-linux核心目录&#34;&gt;1. Linux核心目录
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;根下的核心目录&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/etc/&lt;/td&gt;
+&lt;td&gt;系统服务配置文件的目录，存放系统，服务，命令的配置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/home/&lt;/td&gt;
+&lt;td&gt;普通用户家目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/root/&lt;/td&gt;
+&lt;td&gt;root用户家目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/dev/&lt;/td&gt;
+&lt;td&gt;device,设备文件目录，硬盘，光盘&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/tmp/&lt;/td&gt;
+&lt;td&gt;temp临时目录，临时存放内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/proc/&lt;/td&gt;
+&lt;td&gt;process 系统服务，进程信息，类似于汽车的仪表盘&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;2路径表示形式&#34;&gt;2.路径表示形式
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;绝对路径：从根目录（ / ）出发&lt;/p&gt;
+&lt;p&gt;相对路径：从当前目录出发&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3linux命令&#34;&gt;3.Linux命令
+&lt;/h2&gt;&lt;h3 id=&#34;1cd-pwd&#34;&gt;1.cd ,pwd
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;cd：回到家目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd ~：回到家目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd ..：回到上级目录 (cd ../../回到上上级目录)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pwd：查看当前位置&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318182304929.png&#34;
+	width=&#34;313&#34;
+	height=&#34;50&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318182304929_hu15352279809802748694.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318182304929_hu4509528595301537890.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318182304929&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;626&#34;
+		data-flex-basis=&#34;1502px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2mkdir--创建目录&#34;&gt;2.mkdir  创建目录
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;mkdir   elysia&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184658502.png&#34;
+	width=&#34;429&#34;
+	height=&#34;76&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184658502_hu12013598271806253498.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184658502_hu8303168703509376806.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318184658502&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;564&#34;
+		data-flex-basis=&#34;1354px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;mkdir -p elysia/elysia1/elysia2  多层创建目录&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184832175.png&#34;
+	width=&#34;666&#34;
+	height=&#34;229&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184832175_hu2286044781333097879.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184832175_hu136741371649137615.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318184832175&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;290&#34;
+		data-flex-basis=&#34;697px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;3touch-创建文件&#34;&gt;3.touch 创建文件
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;touch elysia&lt;/p&gt;
+&lt;p&gt;创建elysia文件发现问题，ai说文件和目录同名，只会更新目录访问和修改时间&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190329967.png&#34;
+	width=&#34;421&#34;
+	height=&#34;135&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190329967_hu15951862703745105160.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190329967_hu18084998280327773609.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318190329967&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;311&#34;
+		data-flex-basis=&#34;748px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190615513.png&#34;
+	width=&#34;628&#34;
+	height=&#34;148&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190615513_hu6969008639738094429.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190615513_hu8895970918333233286.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318190615513&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;424&#34;
+		data-flex-basis=&#34;1018px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;创建elysia1，创建成功&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190644484.png&#34;
+	width=&#34;396&#34;
+	height=&#34;77&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190644484_hu4784402994641372827.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190644484_hu10671532729133275362.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318190644484&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;514&#34;
+		data-flex-basis=&#34;1234px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;创建两个文件需要用绝对路径&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190837378.png&#34;
+	width=&#34;848&#34;
+	height=&#34;82&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190837378_hu15172019050878055458.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190837378_hu17126216878669249122.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318190837378&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1034&#34;
+		data-flex-basis=&#34;2481px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果第一个用绝对路径 ，第二个没用， 第二个文件按相对路径创建文件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191101268.png&#34;
+	width=&#34;678&#34;
+	height=&#34;155&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191101268_hu8389732087019990347.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191101268_hu4907577112673194736.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318191101268&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;437&#34;
+		data-flex-basis=&#34;1049px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;4ls查看目录&#34;&gt;4.ls查看目录
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;ls elysia&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191901992.png&#34;
+	width=&#34;344&#34;
+	height=&#34;47&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191901992_hu12234425146761748859.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191901992_hu6598669914858721787.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318191901992&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;731&#34;
+		data-flex-basis=&#34;1756px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;ls -l elysia 可以简写为ll elysia&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192000858.png&#34;
+	width=&#34;665&#34;
+	height=&#34;199&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192000858_hu7114509726600876832.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192000858_hu14354124405530176990.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318192000858&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;334&#34;
+		data-flex-basis=&#34;802px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;ls -l -t elysia 按照时间查看目录内容，选项可合并ls -lrt elysia&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192227226.png&#34;
+	width=&#34;621&#34;
+	height=&#34;172&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192227226_hu219372396988529756.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192227226_hu18412775575899568060.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318192227226&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;361&#34;
+		data-flex-basis=&#34;866px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;ls -l -t -r root 按照时间查看目录内容并逆序排序，选项可合并ls -lrt elysia&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192343218.png&#34;
+	width=&#34;677&#34;
+	height=&#34;170&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192343218_hu16907862600593811674.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192343218_hu15968811027188444898.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318192343218&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;398&#34;
+		data-flex-basis=&#34;955px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192448941.png&#34;
+	width=&#34;643&#34;
+	height=&#34;176&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192448941_hu2341462099780057123.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192448941_hu9050361285443976225.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318192448941&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;365&#34;
+		data-flex-basis=&#34;876px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;ls -lh elysia（ll -h elysia） 让文件大小变为人类可读形式&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192629909.png&#34;
+	width=&#34;636&#34;
+	height=&#34;172&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192629909_hu4240638974906176631.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192629909_hu9181234818166386260.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260318192629909&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;369&#34;
+		data-flex-basis=&#34;887px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;4096变为4.0K&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1KB=1024bytes&lt;/li&gt;
+&lt;li&gt;1MB=1024KB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Elysia02</title>
         <link>https://Elysia492.github.io/p/elysia02/</link>
         <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
