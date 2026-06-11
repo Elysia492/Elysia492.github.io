@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Linux的组成与发行版本">
-<title>Elysia01</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Linux目录结构初级与Linux极其核心命令">
+<title>Elysia-03</title>
 
-<link rel='canonical' href='https://Elysia492.github.io/p/elysia01/'>
+<link rel='canonical' href='https://Elysia492.github.io/p/elysia-03/'>
 
-<link rel="stylesheet" href="/scss/style.min.c45f33b2d5456850d4a2c5e8f11abe041a8b1c80fe99647671f39e824f830b7f.css"><meta property='og:title' content="Elysia01">
-<meta property='og:description' content="Linux的组成与发行版本">
-<meta property='og:url' content='https://Elysia492.github.io/p/elysia01/'>
+<link rel="stylesheet" href="/scss/style.min.c45f33b2d5456850d4a2c5e8f11abe041a8b1c80fe99647671f39e824f830b7f.css"><meta property='og:title' content="Elysia-03">
+<meta property='og:description' content="Linux目录结构初级与Linux极其核心命令">
+<meta property='og:url' content='https://Elysia492.github.io/p/elysia-03/'>
 <meta property='og:site_name' content='爱莉希雅♪'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='css' /><meta property='article:tag' content='html' /><meta property='article:tag' content='themes' /><meta property='article:published_time' content='2026-03-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-03-14T00:00:00&#43;00:00'/><meta property='og:image' content='https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8901.jpg' />
-<meta name="twitter:title" content="Elysia01">
-<meta name="twitter:description" content="Linux的组成与发行版本"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8901.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='css' /><meta property='article:tag' content='html' /><meta property='article:tag' content='themes' /><meta property='article:published_time' content='2026-03-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-03-17T00:00:00&#43;00:00'/><meta property='og:image' content='https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8902.jpg' />
+<meta name="twitter:title" content="Elysia-03">
+<meta name="twitter:description" content="Linux目录结构初级与Linux极其核心命令"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8902.jpg' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
   
@@ -285,10 +285,14 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#1-linux核心目录">1. Linux核心目录</a></li>
+    <li><a href="#2路径表示形式">2.路径表示形式</a></li>
+    <li><a href="#3linux命令">3.Linux命令</a>
       <ol>
-        <li><a href="#1linux组成">1：Linux组成</a></li>
-        <li><a href="#2linux发行版本">2：Linux发行版本</a></li>
+        <li><a href="#1cd-pwd">1.cd ,pwd</a></li>
+        <li><a href="#2mkdir--创建目录">2.mkdir  创建目录</a></li>
+        <li><a href="#3touch-创建文件">3.touch 创建文件</a></li>
+        <li><a href="#4ls查看目录">4.ls查看目录</a></li>
       </ol>
     </li>
   </ol>
@@ -305,9 +309,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/elysia01/">
+            <a href="/p/elysia-03/">
                 
-                    <img src="/imag/%e7%88%b1%e8%8e%8901.jpg" loading="lazy" alt="Featured image of post Elysia01" />
+                    <img src="/imag/%e7%88%b1%e8%8e%8902.jpg" loading="lazy" alt="Featured image of post Elysia-03" />
                 
             </a>
         </div>
@@ -326,12 +330,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/elysia01/">Elysia01</a>
+            <a href="/p/elysia-03/">Elysia-03</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Linux的组成与发行版本
+            Linux目录结构初级与Linux极其核心命令
         </h3>
         
     </div>
@@ -352,7 +356,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2026-03-14</time>
+                <time class="article-time--published">2026-03-17</time>
             </div>
         
 
@@ -368,67 +372,286 @@
     <section class="article-content">
     
     
-    <h1 id="第一天学习">第一天学习
-</h1><h3 id="1linux组成">1：Linux组成
-</h3><blockquote>
-<p><img src="/p/elysia01/index.assets/image-20260314160352853.png"
-	width="623"
-	height="437"
-	srcset="/p/elysia01/index.assets/image-20260314160352853_hu2020016650727585040.png 480w, /p/elysia01/index.assets/image-20260314160352853_hu7564228882465846847.png 1024w"
+    <h2 id="1-linux核心目录">1. Linux核心目录
+</h2><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>根下的核心目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/etc/</td>
+<td>系统服务配置文件的目录，存放系统，服务，命令的配置。</td>
+</tr>
+<tr>
+<td>/home/</td>
+<td>普通用户家目录</td>
+</tr>
+<tr>
+<td>/root/</td>
+<td>root用户家目录</td>
+</tr>
+<tr>
+<td>/dev/</td>
+<td>device,设备文件目录，硬盘，光盘</td>
+</tr>
+<tr>
+<td>/tmp/</td>
+<td>temp临时目录，临时存放内容</td>
+</tr>
+<tr>
+<td>/proc/</td>
+<td>process 系统服务，进程信息，类似于汽车的仪表盘</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="2路径表示形式">2.路径表示形式
+</h2><blockquote>
+<p>绝对路径：从根目录（ / ）出发</p>
+<p>相对路径：从当前目录出发</p>
+</blockquote>
+<h2 id="3linux命令">3.Linux命令
+</h2><h3 id="1cd-pwd">1.cd ,pwd
+</h3><ul>
+<li>
+<p>cd：回到家目录</p>
+</li>
+<li>
+<p>cd ~：回到家目录</p>
+</li>
+<li>
+<p>cd ..：回到上级目录 (cd ../../回到上上级目录)</p>
+</li>
+<li>
+<p>pwd：查看当前位置</p>
+<blockquote>
+<p><img src="/p/elysia-03/index.assets/image-20260318182304929.png"
+	width="313"
+	height="50"
+	srcset="/p/elysia-03/index.assets/image-20260318182304929_hu15352279809802748694.png 480w, /p/elysia-03/index.assets/image-20260318182304929_hu4509528595301537890.png 1024w"
 	loading="lazy"
 	
-		alt="image-20260314160352853"
+		alt="image-20260318182304929"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="142"
-		data-flex-basis="342px"
-	
-></p>
-<p>uname  -r    查看内核名称</p>
-<p><img src="/p/elysia01/index.assets/image-20260403134155699.png"
-	width="418"
-	height="57"
-	srcset="/p/elysia01/index.assets/image-20260403134155699_hu7415383360154936552.png 480w, /p/elysia01/index.assets/image-20260403134155699_hu7460617766977199632.png 1024w"
-	loading="lazy"
-	
-		alt="image-20260403134155699"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="733"
-		data-flex-basis="1760px"
+		data-flex-grow="626"
+		data-flex-basis="1502px"
 	
 ></p>
 </blockquote>
-<h3 id="2linux发行版本">2：Linux发行版本
-</h3><blockquote>
-<p><img src="/p/elysia01/index.assets/image-20260314161000041.png"
-	width="1179"
-	height="862"
-	srcset="/p/elysia01/index.assets/image-20260314161000041_hu13836463634636788368.png 480w, /p/elysia01/index.assets/image-20260314161000041_hu15237249208120248871.png 1024w"
-	loading="lazy"
-	
-		alt="image-20260314161000041"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="136"
-		data-flex-basis="328px"
-	
-></p>
-</blockquote>
-<ul>
-<li>核心掌握
-<ol>
-<li>Debian</li>
-<li>Ubuntu</li>
-<li>红帽</li>
-<li>CentOS</li>
-<li>中标麒麟</li>
-</ol>
 </li>
 </ul>
+<h3 id="2mkdir--创建目录">2.mkdir  创建目录
+</h3><blockquote>
+<p>mkdir   elysia</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318184658502.png"
+	width="429"
+	height="76"
+	srcset="/p/elysia-03/index.assets/image-20260318184658502_hu12013598271806253498.png 480w, /p/elysia-03/index.assets/image-20260318184658502_hu8303168703509376806.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318184658502"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="564"
+		data-flex-basis="1354px"
+	
+></p>
+<p>mkdir -p elysia/elysia1/elysia2  多层创建目录</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318184832175.png"
+	width="666"
+	height="229"
+	srcset="/p/elysia-03/index.assets/image-20260318184832175_hu2286044781333097879.png 480w, /p/elysia-03/index.assets/image-20260318184832175_hu136741371649137615.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318184832175"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="290"
+		data-flex-basis="697px"
+	
+></p>
+</blockquote>
+<h3 id="3touch-创建文件">3.touch 创建文件
+</h3><blockquote>
+<p>touch elysia</p>
+<p>创建elysia文件发现问题，ai说文件和目录同名，只会更新目录访问和修改时间</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318190329967.png"
+	width="421"
+	height="135"
+	srcset="/p/elysia-03/index.assets/image-20260318190329967_hu15951862703745105160.png 480w, /p/elysia-03/index.assets/image-20260318190329967_hu18084998280327773609.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318190329967"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="311"
+		data-flex-basis="748px"
+	
+></p>
+<p><img src="/p/elysia-03/index.assets/image-20260318190615513.png"
+	width="628"
+	height="148"
+	srcset="/p/elysia-03/index.assets/image-20260318190615513_hu6969008639738094429.png 480w, /p/elysia-03/index.assets/image-20260318190615513_hu8895970918333233286.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318190615513"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="424"
+		data-flex-basis="1018px"
+	
+></p>
+<p>创建elysia1，创建成功</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318190644484.png"
+	width="396"
+	height="77"
+	srcset="/p/elysia-03/index.assets/image-20260318190644484_hu4784402994641372827.png 480w, /p/elysia-03/index.assets/image-20260318190644484_hu10671532729133275362.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318190644484"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="514"
+		data-flex-basis="1234px"
+	
+></p>
+<p>创建两个文件需要用绝对路径</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318190837378.png"
+	width="848"
+	height="82"
+	srcset="/p/elysia-03/index.assets/image-20260318190837378_hu15172019050878055458.png 480w, /p/elysia-03/index.assets/image-20260318190837378_hu17126216878669249122.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318190837378"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1034"
+		data-flex-basis="2481px"
+	
+></p>
+<p>如果第一个用绝对路径 ，第二个没用， 第二个文件按相对路径创建文件</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318191101268.png"
+	width="678"
+	height="155"
+	srcset="/p/elysia-03/index.assets/image-20260318191101268_hu8389732087019990347.png 480w, /p/elysia-03/index.assets/image-20260318191101268_hu4907577112673194736.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318191101268"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="437"
+		data-flex-basis="1049px"
+	
+></p>
+</blockquote>
+<h3 id="4ls查看目录">4.ls查看目录
+</h3><blockquote>
+<p>ls elysia</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318191901992.png"
+	width="344"
+	height="47"
+	srcset="/p/elysia-03/index.assets/image-20260318191901992_hu12234425146761748859.png 480w, /p/elysia-03/index.assets/image-20260318191901992_hu6598669914858721787.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318191901992"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="731"
+		data-flex-basis="1756px"
+	
+></p>
+<p>ls -l elysia 可以简写为ll elysia</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318192000858.png"
+	width="665"
+	height="199"
+	srcset="/p/elysia-03/index.assets/image-20260318192000858_hu7114509726600876832.png 480w, /p/elysia-03/index.assets/image-20260318192000858_hu14354124405530176990.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318192000858"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="334"
+		data-flex-basis="802px"
+	
+></p>
+<p>ls -l -t elysia 按照时间查看目录内容，选项可合并ls -lrt elysia</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318192227226.png"
+	width="621"
+	height="172"
+	srcset="/p/elysia-03/index.assets/image-20260318192227226_hu219372396988529756.png 480w, /p/elysia-03/index.assets/image-20260318192227226_hu18412775575899568060.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318192227226"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="361"
+		data-flex-basis="866px"
+	
+></p>
+<p>ls -l -t -r root 按照时间查看目录内容并逆序排序，选项可合并ls -lrt elysia</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318192343218.png"
+	width="677"
+	height="170"
+	srcset="/p/elysia-03/index.assets/image-20260318192343218_hu16907862600593811674.png 480w, /p/elysia-03/index.assets/image-20260318192343218_hu15968811027188444898.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318192343218"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="398"
+		data-flex-basis="955px"
+	
+></p>
+<p><img src="/p/elysia-03/index.assets/image-20260318192448941.png"
+	width="643"
+	height="176"
+	srcset="/p/elysia-03/index.assets/image-20260318192448941_hu2341462099780057123.png 480w, /p/elysia-03/index.assets/image-20260318192448941_hu9050361285443976225.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318192448941"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="365"
+		data-flex-basis="876px"
+	
+></p>
+<p>ls -lh elysia（ll -h elysia） 让文件大小变为人类可读形式</p>
+<p><img src="/p/elysia-03/index.assets/image-20260318192629909.png"
+	width="636"
+	height="172"
+	srcset="/p/elysia-03/index.assets/image-20260318192629909_hu4240638974906176631.png 480w, /p/elysia-03/index.assets/image-20260318192629909_hu9181234818166386260.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260318192629909"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="369"
+		data-flex-basis="887px"
+	
+></p>
+<p>4096变为4.0K</p>
+<ul>
+<li>1KB=1024bytes</li>
+<li>1MB=1024KB</li>
+</ul>
+</blockquote>
 
 </section>
 
@@ -465,7 +688,26 @@
             
                 
 <article class="has-image">
-    <a href="/p/elysia04/">
+    <a href="/p/elysia-05/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/imag/%e5%a4%a9%e5%8f%b0-05.jpg" loading="lazy" data-key="" data-hash="/imag/天台-05.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Elysia-05</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/elysia-04/">
         
         
             <div class="article-image">
@@ -476,7 +718,7 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Elysia04</h2>
+            <h2 class="article-title">Elysia-04</h2>
         </div>
     </a>
 </article>
@@ -484,26 +726,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/elysia03/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/imag/%e7%88%b1%e8%8e%8902.jpg" loading="lazy" data-key="" data-hash="/imag/爱莉02.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Elysia03</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/elysia02/">
+    <a href="/p/elysia-02/">
         
         
             <div class="article-image">
@@ -514,7 +737,26 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">Elysia02</h2>
+            <h2 class="article-title">Elysia-02</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/elysia-01/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/imag/%e7%88%b1%e8%8e%8901.jpg" loading="lazy" data-key="" data-hash="/imag/爱莉01.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Elysia-01</h2>
         </div>
     </a>
 </article>

@@ -7,13 +7,273 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>爱莉希雅</copyright>
-        <lastBuildDate>Fri, 03 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Elysia492.github.io/tags/themes/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Elysia04</title>
-        <link>https://Elysia492.github.io/p/elysia04/</link>
+        <lastBuildDate>Thu, 04 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Elysia492.github.io/tags/themes/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Elysia-05</title>
+        <link>https://Elysia492.github.io/p/elysia-05/</link>
+        <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://Elysia492.github.io/p/elysia-05/</guid>
+        <description>&lt;img src="https://Elysia492.github.io/imag/%E5%A4%A9%E5%8F%B0-05.jpg" alt="Featured image of post Elysia-05" /&gt;&lt;h2 id=&#34;1服务器servers&#34;&gt;1.服务器（servers）
+&lt;/h2&gt;&lt;p&gt;有这么个玩意&lt;/p&gt;
+&lt;h2 id=&#34;2目录结构&#34;&gt;2.目录结构
+&lt;/h2&gt;&lt;h3 id=&#34;1etc下的文件&#34;&gt;1./etc/下的文件
+&lt;/h3&gt;&lt;h4 id=&#34;1etchostname--主机名配置文件&#34;&gt;1/etc/hostname  主机名配置文件
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;==ls命令==&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ll  文件夹  文件夹   文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;显示多个文件里的内容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ll -d  文件夹  文件夹   文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;显示文件夹本身的属性&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;root@elysia ~&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ll elysia&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; root root &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt; 18:47 elysia1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root root    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt; 19:10 elysia4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;root@elysia ~&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ll -d elysia&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; root root &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; Mar &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt; 19:10 elysia
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;==hostname命令==&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;效果&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;hostnamectl  set-hostname  想要的主机名（control&amp;mdash;控制）&lt;/td&gt;
+&lt;td&gt;修改主机名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;hostname&lt;/td&gt;
+&lt;td&gt;查看主机名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;2etcsysconfignetwork-scriptsifcfg-eth0--网卡配置文件&#34;&gt;2./etc/sysconfig/network-scripts/ifcfg-eth0  网卡配置文件
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/各种配置的目录&lt;/li&gt;
+&lt;li&gt;/etc/sysconfig system configure系统配置文件&lt;/li&gt;
+&lt;li&gt;/etc/sysconfig/network-scripts/ 网络的配置文件&lt;/li&gt;
+&lt;li&gt;/etc/sysconfig/network-scripts/ifcfg-eth0 或 ens33&lt;/li&gt;
+&lt;li&gt;if interface 网卡接口&lt;/li&gt;
+&lt;li&gt;eth网卡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;3etcrclocal--开机自启动配置文件&#34;&gt;3./etc/rc.local  开机自启动配置文件
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;第1次使用这个文件之前需要给/etc/rc.d/rc.local增加执行权限。
+chmod +x /etc/rc.d/rc.local
+如果在里面写shutdown -h now或reboot就会开机后立刻自动关机&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;4etcfstab-----开机自动挂载的配置文件&#34;&gt;4./etc/fstab     开机自动挂载的配置文件
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;——&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;5etcmotd---文件中的内容会在用户登录系统后显示出来&#34;&gt;5./etc/motd   文件中的内容会在用户登录系统后显示出来
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;vim  /etc/motd（一开始默认是空的）&lt;/p&gt;
+&lt;p&gt;没找到爱莉的&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                       ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ..:nnnMMMMMMMMMMMMMMMMnxnnMMMMMn:.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  `!?MMMMMMMMMMMMMMMMMMMMMMM*!!&amp;#34;!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   !!!!!?!!MMMM**&amp;#34;&amp;#34;&amp;#34;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   !!!!!!!!!!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;~~~         !&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   !!!!!!!!!!&amp;lt;&amp;lt;&amp;lt;&amp;lt;                     !&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   !!!!!!!!!!&amp;lt;&amp;lt;&amp;lt;&amp;lt;                     !&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   !!!!!!!!!!!&amp;lt;&amp;lt;&amp;lt;                     !&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;#39;!!!!!!!!!!&amp;lt;&amp;lt;&amp;lt;                     !&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    !!!!!!!!!!&amp;lt;&amp;lt;&amp;lt;                     !&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    !!!!!!!!!!&amp;lt;&amp;lt;&amp;lt;                     &amp;#39;&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    !!!!!!!!!!&amp;lt;&amp;lt;&amp;lt;                     &amp;#39;&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      !!!!!!!!&amp;lt;&amp;lt;&amp;lt;                  .x+*&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;..xnMMMMMMMX!!!!!&amp;lt;&amp;lt;&amp;lt;        .:+!&amp;#34;!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!?MMMMMMMMMMMMMMH!!!:&amp;lt;&amp;lt;&amp;lt;&amp;#34;!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;:xnMMMh.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!!!MMMMMMMMMMMMMMX!!!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;:xnHMMMMMMMMMMMMMM%
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#39;!!!!?MMMMMMMMMMMMMMXxnHMMMMMMMMMMMMMMM*!&amp;#34;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!!!!!!MMMMMMMMMMMMMMMMMMMMMMM*&amp;#34;&amp;#34;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!!!!!!!!MMMMMMMMMMMM*!!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;            .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`!!!!!!!!M*&amp;#34;!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;.:n.      4MR8888o
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!!!!!!!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;:xnMMMMMMMMMM.      ^tR*#&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;!!!!!!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;:nHMMMMMMMMMMMMMMMMMMMM.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; ~!!!!&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;:xnMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   !!!&amp;lt;&amp;lt;&amp;lt;&amp;lt;:nHMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     !&amp;lt;&amp;lt;&amp;lt;!MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM*&amp;#34;&amp;lt;&amp;lt;&amp;lt;~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;         ~!?MMMMMMMMMMMMMMMMMMMMMMMMMMM*!!&amp;lt;&amp;lt;&amp;lt;~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           !!MMMMMMMMMMMMMMMMMMMM*&amp;#34;&amp;lt;&amp;lt;&amp;lt;~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;             !MMMMMMMMMMM*&amp;#34;&amp;lt;&amp;lt;&amp;lt;~~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              `!MM*!!&amp;lt;&amp;lt;&amp;lt;~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                `~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[root@elysia ~]#
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;h4 id=&#34;6etcissue--etcissuenet文件中的内容会在用户登录系统前显示出来&#34;&gt;6./etc/issue  /etc/issue.net文件中的内容会在用户登录系统前显示出来
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-05/index.assets/image-20260610164043142.png&#34;
+	width=&#34;475&#34;
+	height=&#34;75&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-05/index.assets/image-20260610164043142_hu2703917245685018910.png 480w, https://Elysia492.github.io/p/elysia-05/index.assets/image-20260610164043142_hu11198298086864035727.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260610164043142&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;633&#34;
+		data-flex-basis=&#34;1520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;就是这前两行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2var下的文件&#34;&gt;2./var/下的文件
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;var  经常变化的内容，比如日志&lt;/p&gt;
+&lt;p&gt;有异常的1时候查日志。&lt;/p&gt;
+&lt;p&gt;日志记录者系统，服务的运行情况。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;1varlog-系统及服务的各种日志目录&#34;&gt;1./var/log/ 系统及服务的各种日志目录
+&lt;/h4&gt;&lt;h5 id=&#34;1varlogsecure---存放用户登录情况日志&#34;&gt;1./var/log/secure   存放用户登录情况日志
+&lt;/h5&gt;&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -p &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; 用户名@ip地址
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Jun &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 17:07:02 elysia sshd&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;14715&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: Failed password &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; invalid user elysia from 120.48.96.40 port &lt;span class=&#34;m&#34;&gt;60988&lt;/span&gt; ssh2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Jun &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 17:07:08 elysia sshd&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;14715&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: pam_unix&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;sshd:auth&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: check pass&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; user unknown
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Jun &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 17:07:10 elysia sshd&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;14715&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: Failed password &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; invalid user elysia from 120.48.96.40 port &lt;span class=&#34;m&#34;&gt;60988&lt;/span&gt; ssh2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Jun &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 17:07:13 elysia sshd&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;14736&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: pam_unix&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;sshd:auth&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: authentication failure&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;logname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;uid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;euid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;tty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ssh &lt;span class=&#34;nv&#34;&gt;ruser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;rhost&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;102.220.160.160  &lt;span class=&#34;nv&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Jun &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 17:07:13 elysia sshd&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;14736&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: pam_succeed_if&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;sshd:auth&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: requirement &lt;span class=&#34;s2&#34;&gt;&amp;#34;uid &amp;gt;= 1000&amp;#34;&lt;/span&gt; not met by user &lt;span class=&#34;s2&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Jun &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 17:07:15 elysia sshd&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;14736&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: Failed password &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; root from 102.220.160.160 port &lt;span class=&#34;m&#34;&gt;45174&lt;/span&gt; ssh2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Failed   password   ——&amp;gt; 登录失败&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;2varlogmessages---通常各种服务的日志&#34;&gt;2./var/log/messages   通常各种服务的日志
+&lt;/h5&gt;&lt;h3 id=&#34;3proc目录下面&#34;&gt;3./proc/目录下面
+&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;这个目录下面存放的是系统的各种内存中进程信息，Linux内核配置，系统信息&lt;/p&gt;
+&lt;p&gt;这是个虚拟目录，不会占用磁盘空间&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;1proccpuinfo--cpu信息&#34;&gt;1./proc/cpuinfo  cpu信息
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;lscpu  查看cpu信息，核心数，颗数&lt;/p&gt;
+&lt;p&gt;CPU（s)     核心数&lt;/p&gt;
+&lt;p&gt;Socket：cpu颗数&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CPU&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:                &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;On-line CPU&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; list:   0,1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Thread&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; per core:    &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Core&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; per socket:    &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Socket&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:             &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;h4 id=&#34;2procmeminfo-内存信息&#34;&gt;2./proc/meminfo 内存信息
+&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;内存&lt;/th&gt;
+&lt;th&gt;磁盘&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;临时存放数据的地方&lt;/td&gt;
+&lt;td&gt;永久存储数据的地方&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;内存：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cpu速度太快的，硬盘速度较慢，cpu就要等着硬盘，造成系统缓慢。&lt;/li&gt;
+&lt;li&gt;内存速度比cpu慢，比硬盘快。CPU==&amp;gt; 内存==&amp;gt;磁盘&lt;/li&gt;
+&lt;li&gt;运行磁盘中程序，运行在内存中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;cup：用于处理数据 ，速度最快。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Elysia-04</title>
+        <link>https://Elysia492.github.io/p/elysia-04/</link>
         <pubDate>Fri, 03 Apr 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Elysia492.github.io/p/elysia04/</guid>
-        <description>&lt;img src="https://Elysia492.github.io/imag/%E9%81%90%E8%9D%B6.jpg" alt="Featured image of post Elysia04" /&gt;&lt;h2 id=&#34;1mv移动改名&#34;&gt;1.mv（移动，改名）
+        <guid>https://Elysia492.github.io/p/elysia-04/</guid>
+        <description>&lt;img src="https://Elysia492.github.io/imag/%E9%81%90%E8%9D%B6.jpg" alt="Featured image of post Elysia-04" /&gt;&lt;h2 id=&#34;1mv移动改名&#34;&gt;1.mv（移动，改名）
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;==移动文件==&lt;/p&gt;
 &lt;p&gt;mv     文件     目的地&lt;/p&gt;
@@ -340,8 +600,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;6vi-vim文本编辑器&#34;&gt;6.vi-vim(文本编辑器)
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;.打开文件（不存在就自动创建这个文件）&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;1打开文件不存在就自动创建这个文件&#34;&gt;&lt;strong&gt;1&lt;/strong&gt;.打开文件（不存在就自动创建这个文件）
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;vim + 文件名&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -404,32 +664,171 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt;.按字母 i 进入编辑模式&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3&lt;/strong&gt;.按Esc推出编辑&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4&lt;/strong&gt;.输入&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;2vim快捷键&#34;&gt;&lt;strong&gt;2&lt;/strong&gt;.vim快捷键
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;:wq  保存退出&lt;/p&gt;
+&lt;p&gt;按字母 i 进入编辑模式&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;:q!    强制退出不保存&lt;/p&gt;
+&lt;p&gt;按Esc推出编辑&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;:wq!  强制退出并保存&lt;/p&gt;
+&lt;p&gt;输入&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;:wq  保存退出&lt;/p&gt;
+&lt;p&gt;:q!    强制退出不保存&lt;/p&gt;
+&lt;p&gt;:wq!  强制退出并保存&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;​&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上下调整&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;G(shift+g)&lt;/td&gt;
+&lt;td&gt;移动到最后一行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;gg&lt;/td&gt;
+&lt;td&gt;移动到第一行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;100gg&lt;/td&gt;
+&lt;td&gt;快速移动到100行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;左右调整&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;^或数字0&lt;/td&gt;
+&lt;td&gt;光标移动到行首&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;$&lt;/td&gt;
+&lt;td&gt;光标移动到行尾&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;4个箭头（hlkg）上下左右移动&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;复制，粘贴，剪切（删除）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;yy&lt;/td&gt;
+&lt;td&gt;复制当前行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;dd&lt;/td&gt;
+&lt;td&gt;删除当前行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;p/5p&lt;/td&gt;
+&lt;td&gt;粘贴到当前行后/重复粘贴5次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其他快捷键&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;u&lt;/td&gt;
+&lt;td&gt;撤销&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:set nu/set number&lt;/td&gt;
+&lt;td&gt;显示行号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:set nonu&lt;/td&gt;
+&lt;td&gt;取消显示行号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/你想要的内容&lt;/td&gt;
+&lt;td&gt;搜索（默认向下寻找）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;？你想要的内容&lt;/td&gt;
+&lt;td&gt;搜索（默认向上寻找）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;n/N&lt;/td&gt;
+&lt;td&gt;继续向下搜索/继续向上搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;批量操作&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;删除&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按ctrl + v后进入可视块模式，按上下选取此列范围，再按左右可以横向添加所选范围，按d删除所选范围。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;添加&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按ctrl + v后进入可视块模式，选取范围，按	I（shift+i），输入想添加的内容，按esc，等一秒就会填进去所选范围&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;故障案例&lt;/p&gt;
+&lt;p&gt;编辑文件中途断网或断电，会保留交换文件.test.txt.swp&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt; 直接删除&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt; 恢复文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;第一步 vim -r test.txt&lt;/p&gt;
+&lt;p&gt;第二步 rm -f .test.txt.swp&lt;/p&gt;
+&lt;p&gt;打开文件即恢复&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         <item>
-        <title>Elysia03</title>
-        <link>https://Elysia492.github.io/p/elysia03/</link>
+        <title>Elysia-03</title>
+        <link>https://Elysia492.github.io/p/elysia-03/</link>
         <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Elysia492.github.io/p/elysia03/</guid>
-        <description>&lt;img src="https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8902.jpg" alt="Featured image of post Elysia03" /&gt;&lt;h2 id=&#34;1-linux核心目录&#34;&gt;1. Linux核心目录
+        <guid>https://Elysia492.github.io/p/elysia-03/</guid>
+        <description>&lt;img src="https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8902.jpg" alt="Featured image of post Elysia-03" /&gt;&lt;h2 id=&#34;1-linux核心目录&#34;&gt;1. Linux核心目录
 &lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -484,10 +883,10 @@
 &lt;li&gt;
 &lt;p&gt;pwd：查看当前位置&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318182304929.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318182304929.png&#34;
 	width=&#34;313&#34;
 	height=&#34;50&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318182304929_hu15352279809802748694.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318182304929_hu4509528595301537890.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318182304929_hu15352279809802748694.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318182304929_hu4509528595301537890.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318182304929&#34;
@@ -504,10 +903,10 @@
 &lt;h3 id=&#34;2mkdir--创建目录&#34;&gt;2.mkdir  创建目录
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;mkdir   elysia&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184658502.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318184658502.png&#34;
 	width=&#34;429&#34;
 	height=&#34;76&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184658502_hu12013598271806253498.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184658502_hu8303168703509376806.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318184658502_hu12013598271806253498.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318184658502_hu8303168703509376806.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318184658502&#34;
@@ -519,10 +918,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;mkdir -p elysia/elysia1/elysia2  多层创建目录&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184832175.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318184832175.png&#34;
 	width=&#34;666&#34;
 	height=&#34;229&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184832175_hu2286044781333097879.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318184832175_hu136741371649137615.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318184832175_hu2286044781333097879.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318184832175_hu136741371649137615.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318184832175&#34;
@@ -538,10 +937,10 @@
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;touch elysia&lt;/p&gt;
 &lt;p&gt;创建elysia文件发现问题，ai说文件和目录同名，只会更新目录访问和修改时间&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190329967.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190329967.png&#34;
 	width=&#34;421&#34;
 	height=&#34;135&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190329967_hu15951862703745105160.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190329967_hu18084998280327773609.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190329967_hu15951862703745105160.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190329967_hu18084998280327773609.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318190329967&#34;
@@ -552,10 +951,10 @@
 		data-flex-basis=&#34;748px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190615513.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190615513.png&#34;
 	width=&#34;628&#34;
 	height=&#34;148&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190615513_hu6969008639738094429.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190615513_hu8895970918333233286.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190615513_hu6969008639738094429.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190615513_hu8895970918333233286.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318190615513&#34;
@@ -567,10 +966,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;创建elysia1，创建成功&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190644484.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190644484.png&#34;
 	width=&#34;396&#34;
 	height=&#34;77&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190644484_hu4784402994641372827.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190644484_hu10671532729133275362.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190644484_hu4784402994641372827.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190644484_hu10671532729133275362.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318190644484&#34;
@@ -582,10 +981,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;创建两个文件需要用绝对路径&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190837378.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190837378.png&#34;
 	width=&#34;848&#34;
 	height=&#34;82&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190837378_hu15172019050878055458.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318190837378_hu17126216878669249122.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190837378_hu15172019050878055458.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318190837378_hu17126216878669249122.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318190837378&#34;
@@ -597,10 +996,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;如果第一个用绝对路径 ，第二个没用， 第二个文件按相对路径创建文件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191101268.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318191101268.png&#34;
 	width=&#34;678&#34;
 	height=&#34;155&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191101268_hu8389732087019990347.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191101268_hu4907577112673194736.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318191101268_hu8389732087019990347.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318191101268_hu4907577112673194736.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318191101268&#34;
@@ -615,10 +1014,10 @@
 &lt;h3 id=&#34;4ls查看目录&#34;&gt;4.ls查看目录
 &lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;ls elysia&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191901992.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318191901992.png&#34;
 	width=&#34;344&#34;
 	height=&#34;47&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191901992_hu12234425146761748859.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318191901992_hu6598669914858721787.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318191901992_hu12234425146761748859.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318191901992_hu6598669914858721787.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318191901992&#34;
@@ -630,10 +1029,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;ls -l elysia 可以简写为ll elysia&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192000858.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192000858.png&#34;
 	width=&#34;665&#34;
 	height=&#34;199&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192000858_hu7114509726600876832.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192000858_hu14354124405530176990.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192000858_hu7114509726600876832.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192000858_hu14354124405530176990.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318192000858&#34;
@@ -645,10 +1044,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;ls -l -t elysia 按照时间查看目录内容，选项可合并ls -lrt elysia&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192227226.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192227226.png&#34;
 	width=&#34;621&#34;
 	height=&#34;172&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192227226_hu219372396988529756.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192227226_hu18412775575899568060.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192227226_hu219372396988529756.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192227226_hu18412775575899568060.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318192227226&#34;
@@ -660,10 +1059,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;ls -l -t -r root 按照时间查看目录内容并逆序排序，选项可合并ls -lrt elysia&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192343218.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192343218.png&#34;
 	width=&#34;677&#34;
 	height=&#34;170&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192343218_hu16907862600593811674.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192343218_hu15968811027188444898.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192343218_hu16907862600593811674.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192343218_hu15968811027188444898.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318192343218&#34;
@@ -674,10 +1073,10 @@
 		data-flex-basis=&#34;955px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192448941.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192448941.png&#34;
 	width=&#34;643&#34;
 	height=&#34;176&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192448941_hu2341462099780057123.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192448941_hu9050361285443976225.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192448941_hu2341462099780057123.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192448941_hu9050361285443976225.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318192448941&#34;
@@ -689,10 +1088,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;ls -lh elysia（ll -h elysia） 让文件大小变为人类可读形式&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192629909.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192629909.png&#34;
 	width=&#34;636&#34;
 	height=&#34;172&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192629909_hu4240638974906176631.png 480w, https://Elysia492.github.io/p/elysia03/index.assets/image-20260318192629909_hu9181234818166386260.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192629909_hu4240638974906176631.png 480w, https://Elysia492.github.io/p/elysia-03/index.assets/image-20260318192629909_hu9181234818166386260.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260318192629909&#34;
@@ -712,17 +1111,17 @@
 </description>
         </item>
         <item>
-        <title>Elysia02</title>
-        <link>https://Elysia492.github.io/p/elysia02/</link>
+        <title>Elysia-02</title>
+        <link>https://Elysia492.github.io/p/elysia-02/</link>
         <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Elysia492.github.io/p/elysia02/</guid>
-        <description>&lt;img src="https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8903.jpg" alt="Featured image of post Elysia02" /&gt;&lt;h2 id=&#34;1ip地址&#34;&gt;1.ip地址
+        <guid>https://Elysia492.github.io/p/elysia-02/</guid>
+        <description>&lt;img src="https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8903.jpg" alt="Featured image of post Elysia-02" /&gt;&lt;h2 id=&#34;1ip地址&#34;&gt;1.ip地址
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141103418.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-02/index.assets/image-20260315141103418.png&#34;
 	width=&#34;1053&#34;
 	height=&#34;585&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141103418_hu3759457654291579976.png 480w, https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141103418_hu11209815731884202356.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-02/index.assets/image-20260315141103418_hu3759457654291579976.png 480w, https://Elysia492.github.io/p/elysia-02/index.assets/image-20260315141103418_hu11209815731884202356.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260315141103418&#34;
@@ -736,10 +1135,10 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;2端口&#34;&gt;2.端口
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141305896.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-02/index.assets/image-20260315141305896.png&#34;
 	width=&#34;1069&#34;
 	height=&#34;728&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141305896_hu4655075692166612528.png 480w, https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141305896_hu12949531898887928897.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-02/index.assets/image-20260315141305896_hu4655075692166612528.png 480w, https://Elysia492.github.io/p/elysia-02/index.assets/image-20260315141305896_hu12949531898887928897.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260315141305896&#34;
@@ -750,10 +1149,10 @@
 		data-flex-basis=&#34;352px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141359398.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-02/index.assets/image-20260315141359398.png&#34;
 	width=&#34;943&#34;
 	height=&#34;228&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141359398_hu5995878794443792860.png 480w, https://Elysia492.github.io/p/elysia02/index.assets/image-20260315141359398_hu6456918141004657450.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-02/index.assets/image-20260315141359398_hu5995878794443792860.png 480w, https://Elysia492.github.io/p/elysia-02/index.assets/image-20260315141359398_hu6456918141004657450.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260315141359398&#34;
@@ -851,18 +1250,18 @@
 &lt;/h2&gt;</description>
         </item>
         <item>
-        <title>Elysia01</title>
-        <link>https://Elysia492.github.io/p/elysia01/</link>
+        <title>Elysia-01</title>
+        <link>https://Elysia492.github.io/p/elysia-01/</link>
         <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
         
-        <guid>https://Elysia492.github.io/p/elysia01/</guid>
-        <description>&lt;img src="https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8901.jpg" alt="Featured image of post Elysia01" /&gt;&lt;h1 id=&#34;第一天学习&#34;&gt;第一天学习
+        <guid>https://Elysia492.github.io/p/elysia-01/</guid>
+        <description>&lt;img src="https://Elysia492.github.io/imag/%E7%88%B1%E8%8E%8901.jpg" alt="Featured image of post Elysia-01" /&gt;&lt;h1 id=&#34;第一天学习&#34;&gt;第一天学习
 &lt;/h1&gt;&lt;h3 id=&#34;1linux组成&#34;&gt;1：Linux组成
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314160352853.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-01/index.assets/image-20260314160352853.png&#34;
 	width=&#34;623&#34;
 	height=&#34;437&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314160352853_hu2020016650727585040.png 480w, https://Elysia492.github.io/p/elysia01/index.assets/image-20260314160352853_hu7564228882465846847.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-01/index.assets/image-20260314160352853_hu2020016650727585040.png 480w, https://Elysia492.github.io/p/elysia-01/index.assets/image-20260314160352853_hu7564228882465846847.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260314160352853&#34;
@@ -874,10 +1273,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;uname  -r    查看内核名称&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260403134155699.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-01/index.assets/image-20260403134155699.png&#34;
 	width=&#34;418&#34;
 	height=&#34;57&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260403134155699_hu7415383360154936552.png 480w, https://Elysia492.github.io/p/elysia01/index.assets/image-20260403134155699_hu7460617766977199632.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-01/index.assets/image-20260403134155699_hu7415383360154936552.png 480w, https://Elysia492.github.io/p/elysia-01/index.assets/image-20260403134155699_hu7460617766977199632.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260403134155699&#34;
@@ -891,10 +1290,10 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;2linux发行版本&#34;&gt;2：Linux发行版本
 &lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314161000041.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://Elysia492.github.io/p/elysia-01/index.assets/image-20260314161000041.png&#34;
 	width=&#34;1179&#34;
 	height=&#34;862&#34;
-	srcset=&#34;https://Elysia492.github.io/p/elysia01/index.assets/image-20260314161000041_hu13836463634636788368.png 480w, https://Elysia492.github.io/p/elysia01/index.assets/image-20260314161000041_hu15237249208120248871.png 1024w&#34;
+	srcset=&#34;https://Elysia492.github.io/p/elysia-01/index.assets/image-20260314161000041_hu13836463634636788368.png 480w, https://Elysia492.github.io/p/elysia-01/index.assets/image-20260314161000041_hu15237249208120248871.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20260314161000041&#34;
