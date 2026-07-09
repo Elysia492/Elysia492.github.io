@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Linux目录结构进阶与Linux目录结构命令">
+<title>Elysia-06</title>
+
+<link rel='canonical' href='https://Elysia492.github.io/p/elysia-06/'>
+
+<link rel="stylesheet" href="/scss/style.min.c45f33b2d5456850d4a2c5e8f11abe041a8b1c80fe99647671f39e824f830b7f.css"><meta property='og:title' content="Elysia-06">
+<meta property='og:description' content="Linux目录结构进阶与Linux目录结构命令">
+<meta property='og:url' content='https://Elysia492.github.io/p/elysia-06/'>
+<meta property='og:site_name' content='爱莉希雅♪'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='css' /><meta property='article:tag' content='html' /><meta property='article:tag' content='themes' /><meta property='article:published_time' content='2026-07-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-07-09T00:00:00&#43;00:00'/><meta property='og:image' content='https://Elysia492.github.io/imag/08.jpg' />
+<meta name="twitter:title" content="Elysia-06">
+<meta name="twitter:description" content="Linux目录结构进阶与Linux目录结构命令"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://Elysia492.github.io/imag/08.jpg' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/imag_hu1346705370482322205.gif" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🤩</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">爱莉希雅♪</a></h1>
+            <h2 class="site-description">一切献给爱莉希雅！</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.bilibili.com/video/BV1fY4y1F7GL/?spm_id_from=333.337'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1head">1.head</a></li>
+    <li><a href="#2tail">2.tail</a></li>
+    <li><a href="#3less----按页显示文件内容">3.less    按页显示文件内容</a></li>
+    <li><a href="#4more---按页显示文件内容到达最后一行就自动退出">4.more   按页显示文件内容，到达最后一行就自动退出</a></li>
+    <li><a href="#5小结">5.小结</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#51-sort-排序">5.1 sort 排序</a>
+      <ol>
+        <li><a href="#1按照数字排序">1&gt;按照数字排序</a></li>
+        <li><a href="#2倒序">2&gt;倒序</a></li>
+        <li><a href="#3按照某一列排序">3&gt;按照某一列排序</a></li>
+        <li><a href="#4对指定分隔符排序">4&gt;对指定分隔符排序</a></li>
+        <li><a href="#5多列排序">5&gt;多列排序</a></li>
+      </ol>
+    </li>
+    <li><a href="#52-uniq">5.2 uniq</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#61-date">6.1 date</a></li>
+    <li><a href="#62-ntpdate-同步时间命令">6.2 ntpdate 同步时间命令</a></li>
+    <li><a href="#63-修改时区">6.3 修改时区</a></li>
+    <li><a href="#64-反引号">6.4 反引号``</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/elysia-06/">
+                
+                    <img src="/imag/08.jpg" loading="lazy" alt="Featured image of post Elysia-06" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/elysia/" >
+                Elysia
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/elysia-06/">Elysia-06</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Linux目录结构进阶与Linux目录结构命令
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2026-07-09</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="1日志查询四剑客">1.日志查询四剑客
+</h1><h2 id="1head">1.head
+</h2><blockquote>
+<p>默认查看文本前十行</p>
+<p>head   -5   日志文件  ——&gt;查看前五行</p>
+<p>head -5和head -n5一样，tail同理</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia /<span class="o">]</span><span class="c1"># head -5 /etc/passwd</span>
+</span></span><span class="line"><span class="cl">root:x:0:0:root:/root:/bin/bash
+</span></span><span class="line"><span class="cl">bin:x:1:1:bin:/bin:/sbin/nologin
+</span></span><span class="line"><span class="cl">daemon:x:2:2:daemon:/sbin:/sbin/nologin
+</span></span><span class="line"><span class="cl">adm:x:3:4:adm:/var/adm:/sbin/nologin
+</span></span><span class="line"><span class="cl">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h2 id="2tail">2.tail
+</h2><blockquote>
+<p>默认查看文本最后十行</p>
+<p>tail    -2   文本文件 ——&gt;查看最后两行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia /<span class="o">]</span><span class="c1"># tail -2 /etc/passwd</span>
+</span></span><span class="line"><span class="cl">ntp:x:38:38::/etc/ntp:/sbin/nologin
+</span></span><span class="line"><span class="cl">tcpdump:x:72:72::/:/sbin/nologin
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>taial  -f   日志文件     ——&gt;   查看日志实时更新</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">窗口一
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># tail -f elysia1</span>
+</span></span><span class="line"><span class="cl">q123456
+</span></span><span class="line"><span class="cl"><span class="m">12332523</span>
+</span></span><span class="line"><span class="cl">2321432131<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">窗口二
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># echo  8848 &gt;&gt;elysia1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">窗口一
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># tail -f elysia1</span>
+</span></span><span class="line"><span class="cl">q123456
+</span></span><span class="line"><span class="cl"><span class="m">12332523</span>
+</span></span><span class="line"><span class="cl">2321432131<span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="m">8848</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h2 id="3less----按页显示文件内容">3.less    按页显示文件内容
+</h2><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>less快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>空格或f</td>
+<td>下一页</td>
+</tr>
+<tr>
+<td>G</td>
+<td>最后一行</td>
+</tr>
+<tr>
+<td>g</td>
+<td>第一行</td>
+</tr>
+<tr>
+<td>99g</td>
+<td>99行</td>
+</tr>
+<tr>
+<td>选项</td>
+<td></td>
+</tr>
+<tr>
+<td>less  -N</td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td>/ 搜索内容</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4more---按页显示文件内容到达最后一行就自动退出">4.more   按页显示文件内容，到达最后一行就自动退出
+</h2><blockquote>
+<p>more功能没有less多</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># more /etc/password</span>
+</span></span><span class="line"><span class="cl">/etc/password: No such file or directory
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># more /etc/passwd</span>
+</span></span><span class="line"><span class="cl">.....
+</span></span><span class="line"><span class="cl">.....
+</span></span><span class="line"><span class="cl">--More--<span class="o">(</span>73%<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>按空格向下翻 ，到最后自动退出</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h2 id="5小结">5.小结
+</h2><ul>
+<li>前后多少组合</li>
+<li>head/tail</li>
+<li>less/more</li>
+<li>大文件避免用cat/vi/vim查看</li>
+</ul>
+<h1 id="2wc统计">2.wc统计
+</h1><ul>
+<li>统计文件中单词情况，大小，行数，    ==未来工作中用于统计行数==</li>
+<li>简单使用是统计文件的行数，未来还可以统计一些命令的结果有多少行（个）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># wc /etc/passwd</span>
+</span></span><span class="line"><span class="cl">  <span class="m">24</span>     <span class="m">36</span>       <span class="m">1099</span>        /etc/passwd
+</span></span><span class="line"><span class="cl"> 行数    单词数   文件大小
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> wc -l  文件      只查看行数
+</span></span><span class="line"><span class="cl"> <span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># wc -l /etc/passwd   只查看行数</span>
+</span></span><span class="line"><span class="cl"><span class="m">24</span> /etc/passwd
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">与其他命令配合 
+</span></span><span class="line"><span class="cl">举例：查看Failed password出现了几次
+</span></span><span class="line"><span class="cl">grep  <span class="s1">&#39;Failed password&#39;</span> /var/log/secure 
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># grep  &#39;Failed password&#39; /var/log/secure</span>
+</span></span><span class="line"><span class="cl">Jul  <span class="m">1</span> 03:47:13 elysia sshd<span class="o">[</span>24650<span class="o">]</span>: Failed password <span class="k">for</span> root from 120.48.181.68 port <span class="m">53934</span> ssh2
+</span></span><span class="line"><span class="cl">Jul  <span class="m">1</span> 03:47:22 elysia sshd<span class="o">[</span>24657<span class="o">]</span>: Failed password <span class="k">for</span> root from 120.48.181.68 port <span class="m">55480</span> ssh2
+</span></span><span class="line"><span class="cl">.....
+</span></span><span class="line"><span class="cl">非常多，需要配合wc命令统计行数
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># grep  &#39;Failed password&#39; /var/log/secure | wc -l</span>
+</span></span><span class="line"><span class="cl"><span class="m">31233</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">命令<span class="p">|</span>命令，    命令里的竖线 <span class="p">|</span>  是管道符，执行多个命令的时候，前面命令的结果交给后面命令加工
+</span></span><span class="line"><span class="cl">grep 命令，过滤。在文件，命令结果中找到想要的内容
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="3查询命令位置">3.查询命令位置
+</h1><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">which + 命令     查询命令位置，也可以检查命令存不存在
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># which ls cd mkdir</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls --color=auto&#39;</span>
+</span></span><span class="line"><span class="cl">   /usr/bin/ls
+</span></span><span class="line"><span class="cl">/usr/bin/cd
+</span></span><span class="line"><span class="cl">/usr/bin/mkdir
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">whereis + 命令   查询命令位置和他的帮助位置
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># whereis cd ls</span>
+</span></span><span class="line"><span class="cl">cd: /usr/bin/cd /usr/share/man/man1/cd.1.gz /usr/share/man/mann/cd.n.gz /usr/share/man/man1p/cd.1p.gz
+</span></span><span class="line"><span class="cl">ls: /usr/bin/ls /usr/share/man/man1/ls.1.gz /usr/share/man/man1p/ls.1p.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="4文件比较命令">4.文件比较命令
+</h1><ul>
+<li>diff</li>
+<li>vimdiff</li>
+</ul>
+<blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">diff    b不够直观
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># diff elysia1 elysia2</span>
+</span></span><span class="line"><span class="cl">1,10d0
+</span></span><span class="line"><span class="cl">&lt; q123456
+</span></span><span class="line"><span class="cl">&lt; <span class="m">12332523</span>
+</span></span><span class="line"><span class="cl">&lt; 2321432131<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">&lt; 
+</span></span><span class="line"><span class="cl">&lt; 
+</span></span><span class="line"><span class="cl">&lt; 
+</span></span><span class="line"><span class="cl">&lt; 
+</span></span><span class="line"><span class="cl">&lt; 
+</span></span><span class="line"><span class="cl">&lt; 
+</span></span><span class="line"><span class="cl">&lt; <span class="m">8848</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"> vimdiff   够直观 直接打开两个文件比较   退出：冒号加q（打开几个文件就重复几次）
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># vimdiff elysia1 elysia2</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span> files to edit
+</span></span><span class="line"><span class="cl"> q123456                                           <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl"> <span class="m">12332523</span>                                          <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl"> 2321432131<span class="sb">`</span>                                       <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl">                                                   <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl">                                                   <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl">                                                   <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl">                                                   <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl">                                                   <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl">                                                   <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl"> <span class="m">8848</span>                                              <span class="p">|</span>  --------------------------------------------------
+</span></span><span class="line"><span class="cl"> ~                                                 <span class="p">|</span>  
+</span></span><span class="line"><span class="cl"> ~                                                 <span class="p">|</span>  ~                                                 
+</span></span><span class="line"><span class="cl"> ~                                                 <span class="p">|</span>  ~                                                 
+</span></span><span class="line"><span class="cl"> ~                                                 <span class="p">|</span>  ~                                                 
+</span></span><span class="line"><span class="cl"> ~                                                 <span class="p">|</span>  ~                                                 
+</span></span><span class="line"><span class="cl"> ~                                                 <span class="p">|</span>  ~                                                 
+</span></span><span class="line"><span class="cl"> ~                                                 <span class="p">|</span>  ~                                                
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h1 id="5排序去重组合">5.排序去重组合
+</h1><blockquote>
+<p>统计日志,日志分析，系统信息统计，必备命令</p>
+</blockquote>
+<ul>
+<li>sort：排序</li>
+<li>uniq：去重</li>
+</ul>
+<h2 id="51-sort-排序">5.1 sort 排序
+</h2><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>sort选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-n</td>
+<td>number把要排序的内容当做是==数字==，按照数字大小进行排序，默认是升序排序（小——&gt;大）</td>
+</tr>
+<tr>
+<td>-k</td>
+<td>指定某一列，根据某一列进行排序</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>reverse逆序排序</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>指定分隔符，单个字符</td>
+</tr>
+</tbody>
+</table></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort elysia2</span>
+</span></span><span class="line"><span class="cl"><span class="m">12213</span>
+</span></span><span class="line"><span class="cl"><span class="m">123</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="m">35</span>
+</span></span><span class="line"><span class="cl"><span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="m">556</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">什么选项也不加，按照每个数字第一个数进行排序
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="1按照数字排序">1&gt;按照数字排序
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -n elysia2</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="m">35</span>
+</span></span><span class="line"><span class="cl"><span class="m">123</span>
+</span></span><span class="line"><span class="cl"><span class="m">556</span>
+</span></span><span class="line"><span class="cl"><span class="m">12213</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">number把要排序的内容当做是</span><span class="o">==</span><span class="nv">数字</span><span class="o">==</span>，按照数字大小进行排序，默认是升序排序（小——&gt;大）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2倒序">2&gt;倒序
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -nr elysia2</span>
+</span></span><span class="line"><span class="cl"><span class="m">12213</span>
+</span></span><span class="line"><span class="cl"><span class="m">556</span>
+</span></span><span class="line"><span class="cl"><span class="m">123</span>
+</span></span><span class="line"><span class="cl"><span class="m">35</span>
+</span></span><span class="line"><span class="cl"><span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="m">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-nr  加了个r变成倒序
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3按照某一列排序">3&gt;按照某一列排序
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># cat elysia3</span>
+</span></span><span class="line"><span class="cl">lice    <span class="m">25</span>
+</span></span><span class="line"><span class="cl">Bob     <span class="m">30</span>
+</span></span><span class="line"><span class="cl">Charlie <span class="m">22</span>
+</span></span><span class="line"><span class="cl">Diana   <span class="m">28</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">此处有两列，第一列第二列有空格隔开
+</span></span><span class="line"><span class="cl">把第二列按逆序排列
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -nr -k2 elysia3</span>
+</span></span><span class="line"><span class="cl">Bob     <span class="m">30</span>
+</span></span><span class="line"><span class="cl">Diana   <span class="m">28</span>
+</span></span><span class="line"><span class="cl">lice    <span class="m">25</span>
+</span></span><span class="line"><span class="cl">Charlie <span class="m">22</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">或选项nrk放一起
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -nrk2 elysia3</span>
+</span></span><span class="line"><span class="cl">Bob <span class="m">30</span>
+</span></span><span class="line"><span class="cl">Diana <span class="m">28</span>
+</span></span><span class="line"><span class="cl">lice <span class="m">25</span>
+</span></span><span class="line"><span class="cl">Charlie <span class="m">22</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">但k要放最后，否则报错
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -nkr2 elysia3</span>
+</span></span><span class="line"><span class="cl">sort: invalid number at field start: invalid count at start of ‘r2’
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">例子：把ll /etc/结果按文件大小逆序排列，取前十
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ll /etc/ |sort -nrk5 |head</span>
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root   <span class="m">670293</span> Jun  <span class="m">7</span>  <span class="m">2013</span> services
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root    <span class="m">33802</span> Dec  <span class="m">5</span>  <span class="m">2023</span> ld.so.cache
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root    <span class="m">12288</span> Jan <span class="m">26</span>  <span class="m">2021</span> aliases.db
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">8892</span> Jun <span class="m">10</span>  <span class="m">2014</span> nanorc
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">7274</span> Dec  <span class="m">5</span>  <span class="m">2023</span> kdump.conf
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">6545</span> Apr  <span class="m">1</span>  <span class="m">2020</span> protocols
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">5861</span> Nov <span class="m">27</span>  <span class="m">2022</span> dat.conf
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">5725</span> Aug  <span class="m">6</span>  <span class="m">2019</span> DIR_COLORS.256color
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">5171</span> Oct <span class="m">31</span>  <span class="m">2018</span> man_db.conf
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">5122</span> Jun <span class="m">10</span>  <span class="m">2021</span> makedumpfile.conf.sample
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4对指定分隔符排序">4&gt;对指定分隔符排序
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">例子：passwd文件排序   
+</span></span><span class="line"><span class="cl">先cp /etc/passwd .  复制到当前目录
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># cat passwd </span>
+</span></span><span class="line"><span class="cl">root:x:0:0:root:/root:/bin/bash
+</span></span><span class="line"><span class="cl">bin:x:1:1:bin:/bin:/sbin/nologin
+</span></span><span class="line"><span class="cl">daemon:x:2:2:daemon:/sbin:/sbin/nologin
+</span></span><span class="line"><span class="cl">adm:x:3:4:adm:/var/adm:/sbin/nologin
+</span></span><span class="line"><span class="cl">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+</span></span><span class="line"><span class="cl">sync:x:5:0:sync:/sbin:/bin/sync
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">默认是空格位分隔符，这个文件每一列都是用 : 分开，用 t 选项来选择 ：作为分隔符
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -t &#39;:&#39; -nrk3 passwd </span>
+</span></span><span class="line"><span class="cl">polkitd:x:999:998:User <span class="k">for</span> polkitd:/:/sbin/nologin
+</span></span><span class="line"><span class="cl">libstoragemgmt:x:998:997:daemon account <span class="k">for</span> libstoragemgmt:/var/run/lsm:/sbin/nologin
+</span></span><span class="line"><span class="cl">chrony:x:997:995::/var/lib/chrony:/sbin/nologin
+</span></span><span class="line"><span class="cl">systemd-network:x:192:192:systemd Network Management:/:/sbin/nologin
+</span></span><span class="line"><span class="cl">abrt:x:173:173::/etc/abrt:/sbin/nologin
+</span></span><span class="line"><span class="cl">nobody:x:99:99:Nobody:/:/sbin/nologin
+</span></span><span class="line"><span class="cl">postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5多列排序">5&gt;多列排序
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="s2">&#34;-k3 -k4&#34;</span>  表示先对k3排列，如果有重复则对k4进行排列
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># cat sort.txt </span>
+</span></span><span class="line"><span class="cl">Alice 销售 <span class="m">75000</span> <span class="m">2019</span>
+</span></span><span class="line"><span class="cl">Bob 工程 <span class="m">120000</span> <span class="m">2021</span>
+</span></span><span class="line"><span class="cl">Charlie 销售 <span class="m">82000</span> <span class="m">2018</span>
+</span></span><span class="line"><span class="cl">Diana 工程 <span class="m">120000</span> <span class="m">2020</span>
+</span></span><span class="line"><span class="cl">Eve 营销 <span class="m">7000</span> <span class="m">2022</span>
+</span></span><span class="line"><span class="cl">Frank 销售 <span class="m">70000</span> <span class="m">2020</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -nr -k3 -k4 sort.txt </span>
+</span></span><span class="line"><span class="cl">Bob 工程 <span class="m">120000</span> <span class="m">2021</span>
+</span></span><span class="line"><span class="cl">Diana 工程 <span class="m">120000</span> <span class="m">2020</span>
+</span></span><span class="line"><span class="cl">Charlie 销售 <span class="m">82000</span> <span class="m">2018</span>
+</span></span><span class="line"><span class="cl">Alice 销售 <span class="m">75000</span> <span class="m">2019</span>
+</span></span><span class="line"><span class="cl">Frank 销售 <span class="m">70000</span> <span class="m">2020</span>
+</span></span><span class="line"><span class="cl">Eve 营销 <span class="m">7000</span> <span class="m">2022</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>例题：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">以 . 为分隔符对第三列和第四列排序
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># cat ip_mac.txt </span>
+</span></span><span class="line"><span class="cl">192.168.0.2 00:AA
+</span></span><span class="line"><span class="cl">192.168.0.10 00:BB
+</span></span><span class="line"><span class="cl">192.168.1.5 00:CC
+</span></span><span class="line"><span class="cl">192.168.1.3 00:DD
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -t&#39;.&#39; -nr -k3 -k4 ip_mac.txt </span>
+</span></span><span class="line"><span class="cl">192.168.1.5 00:CC
+</span></span><span class="line"><span class="cl">192.168.1.3 00:DD
+</span></span><span class="line"><span class="cl">192.168.0.2 00:AA
+</span></span><span class="line"><span class="cl">192.168.0.10 00:BB
+</span></span><span class="line"><span class="cl">后两行出现错误，原因是-k3代表从第三列开始到后面所有
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -t&#39;.&#39; -nr -k3,3 -k4,4 ip_mac.txt </span>
+</span></span><span class="line"><span class="cl">192.168.1.5 00:CC
+</span></span><span class="line"><span class="cl">192.168.1.3 00:DD
+</span></span><span class="line"><span class="cl">192.168.0.10 00:BB
+</span></span><span class="line"><span class="cl">192.168.0.2 00:AA
+</span></span><span class="line"><span class="cl">这下好了，-k3,3表示只对第三列排序，一般只有不是空格为间隔符才有这情况，
+</span></span><span class="line"><span class="cl">这个例子 . 换成空格就不用这么麻烦
+</span></span><span class="line"><span class="cl">把 . 替换为空格
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sed &#39;s/\./ /g&#39; ip_mac.txt &gt; ip_mac_new.txt</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># cat ip_mac_new.txt </span>
+</span></span><span class="line"><span class="cl"><span class="m">192</span> <span class="m">168</span> <span class="m">0</span> <span class="m">2</span> 00:AA
+</span></span><span class="line"><span class="cl"><span class="m">192</span> <span class="m">168</span> <span class="m">0</span> <span class="m">10</span> 00:BB
+</span></span><span class="line"><span class="cl"><span class="m">192</span> <span class="m">168</span> <span class="m">1</span> <span class="m">5</span> 00:CC
+</span></span><span class="line"><span class="cl"><span class="m">192</span> <span class="m">168</span> <span class="m">1</span> <span class="m">3</span> 00:DD
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort -nr -k3 -k4 ip_mac_new.txt </span>
+</span></span><span class="line"><span class="cl"><span class="m">192</span> <span class="m">168</span> <span class="m">1</span> <span class="m">5</span> 00:CC
+</span></span><span class="line"><span class="cl"><span class="m">192</span> <span class="m">168</span> <span class="m">1</span> <span class="m">3</span> 00:DD
+</span></span><span class="line"><span class="cl"><span class="m">192</span> <span class="m">168</span> <span class="m">0</span> <span class="m">10</span> 00:BB
+</span></span><span class="line"><span class="cl"><span class="m">192</span> <span class="m">168</span> <span class="m">0</span> <span class="m">2</span> 00:AA
+</span></span><span class="line"><span class="cl">这样就没问题
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h2 id="52-uniq">5.2 uniq
+</h2><p>可以吧重复的合在一起</p>
+<blockquote>
+<p>用法示例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># cat uniq.txt </span>
+</span></span><span class="line"><span class="cl">apple
+</span></span><span class="line"><span class="cl">banana
+</span></span><span class="line"><span class="cl">apple
+</span></span><span class="line"><span class="cl">apple
+</span></span><span class="line"><span class="cl">orange
+</span></span><span class="line"><span class="cl">orange
+</span></span><span class="line"><span class="cl">pear
+</span></span><span class="line"><span class="cl">banana
+</span></span><span class="line"><span class="cl">grape
+</span></span><span class="line"><span class="cl">grape
+</span></span><span class="line"><span class="cl">grape
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># uniq uniq.txt </span>
+</span></span><span class="line"><span class="cl">apple
+</span></span><span class="line"><span class="cl">banana
+</span></span><span class="line"><span class="cl">apple
+</span></span><span class="line"><span class="cl">orange
+</span></span><span class="line"><span class="cl">pear
+</span></span><span class="line"><span class="cl">banana
+</span></span><span class="line"><span class="cl">grape
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-c 选项可以记录次数
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># uniq -c uniq.txt </span>
+</span></span><span class="line"><span class="cl"><span class="m">1</span> apple
+</span></span><span class="line"><span class="cl"><span class="m">1</span> banana
+</span></span><span class="line"><span class="cl"><span class="m">2</span> apple
+</span></span><span class="line"><span class="cl"><span class="m">2</span> orange
+</span></span><span class="line"><span class="cl"><span class="m">1</span> pear
+</span></span><span class="line"><span class="cl"><span class="m">1</span> banana
+</span></span><span class="line"><span class="cl"><span class="m">3</span> grape
+</span></span><span class="line"><span class="cl">有的重复的不相邻，所以得先进行排序让他们在一块，然后再去重
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort uniq.txt |uniq -c</span>
+</span></span><span class="line"><span class="cl"><span class="m">3</span> apple
+</span></span><span class="line"><span class="cl"><span class="m">2</span> banana
+</span></span><span class="line"><span class="cl"><span class="m">3</span> grape
+</span></span><span class="line"><span class="cl"><span class="m">2</span> orange
+</span></span><span class="line"><span class="cl"><span class="m">1</span> pear
+</span></span><span class="line"><span class="cl">可以给结果再排个序
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort uniq.txt |uniq -c|sort -nr</span>
+</span></span><span class="line"><span class="cl"><span class="m">3</span> grape
+</span></span><span class="line"><span class="cl"><span class="m">3</span> apple
+</span></span><span class="line"><span class="cl"><span class="m">2</span> orange
+</span></span><span class="line"><span class="cl"><span class="m">2</span> banana
+</span></span><span class="line"><span class="cl"><span class="m">1</span> pear
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>案例</p>
+<p>在attack.log里有几万个ip，找出前十个攻击的最频繁的ip</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># sort attack.log |uniq -c|sort -nr|head -10</span>
+</span></span><span class="line"><span class="cl">  <span class="m">4987</span> 192.168.1.100
+</span></span><span class="line"><span class="cl">  <span class="m">4023</span> 10.0.0.50
+</span></span><span class="line"><span class="cl">  <span class="m">3016</span> 203.0.113.45
+</span></span><span class="line"><span class="cl">  <span class="m">1964</span> 198.51.100.22
+</span></span><span class="line"><span class="cl">  <span class="m">1919</span> 172.16.0.88
+</span></span><span class="line"><span class="cl">     <span class="m">2</span> 10.10.99.208
+</span></span><span class="line"><span class="cl">     <span class="m">2</span> 10.10.98.46
+</span></span><span class="line"><span class="cl">     <span class="m">2</span> 10.10.97.50
+</span></span><span class="line"><span class="cl">     <span class="m">2</span> 10.10.96.222
+</span></span><span class="line"><span class="cl">     <span class="m">2</span> 10.10.96.125
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h1 id="6日期组合">6.日期组合
+</h1><ul>
+<li>==date==</li>
+<li>ntpdate</li>
+<li>特殊符号</li>
+</ul>
+<h2 id="61-date">6.1 date
+</h2><blockquote>
+<p>时间命令，主要查看或修改时间。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date</span>
+</span></span><span class="line"><span class="cl">Thu Jul  <span class="m">9</span> 09:43:04 CST <span class="m">2026</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>date  +  按指定格式显示日期</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%F</span>
+</span></span><span class="line"><span class="cl">2026-07-09
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>date +(年月日星期几)</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%F</td>
+<td>2026-07-09</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>07</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>09</td>
+</tr>
+<tr>
+<td>%w</td>
+<td>4</td>
+</tr>
+</tbody>
+</table></div>
+</blockquote>
+<blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%Y</span>
+</span></span><span class="line"><span class="cl"><span class="m">2026</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%m</span>
+</span></span><span class="line"><span class="cl"><span class="m">07</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%d</span>
+</span></span><span class="line"><span class="cl"><span class="m">09</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%Y-%m-%d</span>
+</span></span><span class="line"><span class="cl">2026-07-09
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%w</span>
+</span></span><span class="line"><span class="cl"><span class="m">4</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>date +（时分秒）</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%T</td>
+<td>09:52:29</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>09</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>52</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>29</td>
+</tr>
+</tbody>
+</table></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%H</span>
+</span></span><span class="line"><span class="cl"><span class="m">09</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%M</span>
+</span></span><span class="line"><span class="cl"><span class="m">56</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%S</span>
+</span></span><span class="line"><span class="cl"><span class="m">15</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date +%T</span>
+</span></span><span class="line"><span class="cl">09:56:20
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<blockquote>
+<p>date   -d &rsquo; &rsquo; 显示单引号里指定时间</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date -d &#39;22221222 22:22:22&#39;</span>
+</span></span><span class="line"><span class="cl">Sun Dec <span class="m">22</span> 22:22:22 CST <span class="m">2222</span>
+</span></span><span class="line"><span class="cl">/显示昨天
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date -d &#39;-1day&#39;        </span>
+</span></span><span class="line"><span class="cl">Wed Jul  <span class="m">8</span> 10:04:17 CST <span class="m">2026</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/显示明天
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date -d &#39;1day&#39;        </span>
+</span></span><span class="line"><span class="cl">Fri Jul <span class="m">10</span> 10:04:26 CST <span class="m">2026</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">按年月日显示
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date -d &#39;1day&#39; +%F</span>
+</span></span><span class="line"><span class="cl">2026-07-10
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>date  -s  &rsquo; &rsquo; 修改为单引号里的时间</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date  +%F</span>
+</span></span><span class="line"><span class="cl">2026-07-09
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date -s &#39;20260710&#39;</span>
+</span></span><span class="line"><span class="cl">Fri Jul <span class="m">10</span> 00:00:00 CST <span class="m">2026</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date  +%F</span>
+</span></span><span class="line"><span class="cl">2026-07-10
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h2 id="62-ntpdate-同步时间命令">6.2 ntpdate 同步时间命令
+</h2><blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ntpdate ntp1.aliyun.com
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date -s &#39;20281212&#39;</span>
+</span></span><span class="line"><span class="cl">Tue Dec <span class="m">12</span> 00:00:00 CST <span class="m">2028</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date  +%F</span>
+</span></span><span class="line"><span class="cl">2028-12-12
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ntpdate ntp1.aliyun.com</span>
+</span></span><span class="line"><span class="cl"> <span class="m">9</span> Jul 10:16:47 ntpdate<span class="o">[</span>18734<span class="o">]</span>: step <span class="nb">time</span> server 223.4.249.80 offset -76599814.543782 sec
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># date  +%F</span>
+</span></span><span class="line"><span class="cl">2026-07-09
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h2 id="63-修改时区">6.3 修改时区
+</h2><p>timedatectl 查看时区</p>
+<blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># timedatectl</span>
+</span></span><span class="line"><span class="cl">      Local time: Thu 2026-07-09 10:58:25 CST
+</span></span><span class="line"><span class="cl">  Universal time: Thu 2026-07-09 02:58:25 UTC
+</span></span><span class="line"><span class="cl">        RTC time: Thu 2026-07-09 02:58:24
+</span></span><span class="line"><span class="cl">       Time zone: Asia/Shanghai <span class="o">(</span>CST, +0800<span class="o">)</span>
+</span></span><span class="line"><span class="cl">     NTP enabled: yes
+</span></span><span class="line"><span class="cl">NTP synchronized: yes
+</span></span><span class="line"><span class="cl"> RTC in <span class="nb">local</span> TZ: no
+</span></span><span class="line"><span class="cl">      DST active: n/a
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># timedatectl status</span>
+</span></span><span class="line"><span class="cl">      Local time: Thu 2026-07-09 11:00:21 CST
+</span></span><span class="line"><span class="cl">  Universal time: Thu 2026-07-09 03:00:21 UTC
+</span></span><span class="line"><span class="cl">        RTC time: Thu 2026-07-09 03:00:21
+</span></span><span class="line"><span class="cl">       Time zone: Asia/Shanghai <span class="o">(</span>CST, +0800<span class="o">)</span>
+</span></span><span class="line"><span class="cl">     NTP enabled: yes
+</span></span><span class="line"><span class="cl">NTP synchronized: yes
+</span></span><span class="line"><span class="cl"> RTC in <span class="nb">local</span> TZ: no
+</span></span><span class="line"><span class="cl">      DST active: n/a
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">将时区修改为上海
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># timedatectl set-timezone Asia/Shanghai</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h2 id="64-反引号">6.4 反引号``
+</h2><p>反引号里面的内容优先执行</p>
+<blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># which cd</span>
+</span></span><span class="line"><span class="cl">/usr/bin/cd
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ll /usr/bin/cd</span>
+</span></span><span class="line"><span class="cl">-rwxr-xr-x. <span class="m">1</span> root root <span class="m">26</span> Nov <span class="m">25</span>  <span class="m">2021</span> /usr/bin/cd
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ll `which cd`</span>
+</span></span><span class="line"><span class="cl">-rwxr-xr-x. <span class="m">1</span> root root <span class="m">26</span> Nov <span class="m">25</span>  <span class="m">2021</span> /usr/bin/cd
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># which cd|ll</span>
+</span></span><span class="line"><span class="cl">total <span class="m">284</span>
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root <span class="m">253472</span> Jul  <span class="m">8</span> 16:20 attack.log
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">3</span> root root   <span class="m">4096</span> Jun <span class="m">22</span> 10:48 elysia
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root     <span class="m">40</span> Jul  <span class="m">3</span> 16:07 elysia1
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root     <span class="m">21</span> Jul  <span class="m">4</span> 18:53 elysia2
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root     <span class="m">35</span> Jul  <span class="m">4</span> 19:04 elysia3
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root      <span class="m">0</span> Mar <span class="m">18</span> 19:10 elysia5
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root     <span class="m">73</span> Jul  <span class="m">6</span> 19:32 ip_mac_new.txt
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root     <span class="m">73</span> Jul  <span class="m">6</span> 19:25 ip_mac.txt
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root   <span class="m">1099</span> Jul  <span class="m">6</span> 18:45 passwd
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root    <span class="m">143</span> Jul  <span class="m">6</span> 19:05 sort.txt
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root     <span class="m">69</span> Jul  <span class="m">8</span> 16:08 uniq.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><del>管道符为啥不行暂不清楚</del> 得加个xargs，暂时不懂，而且好像不能用缩写（别名）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># which cd|xargs ll</span>
+</span></span><span class="line"><span class="cl">xargs: ll: No such file or directory
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># which cd|xargs ls -l</span>
+</span></span><span class="line"><span class="cl">-rwxr-xr-x. <span class="m">1</span> root root <span class="m">26</span> Nov <span class="m">25</span>  <span class="m">2021</span> /usr/bin/cd
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>创建一个以时间命名的文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># touch elysia-`date +%F`.txt</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ls</span>
+</span></span><span class="line"><span class="cl">attack.log  elysia1  elysia-2026-07-09.txt 
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/markdown/">Markdown</a>
+        
+            <a href="/tags/css/">Css</a>
+        
+            <a href="/tags/html/">Html</a>
+        
+            <a href="/tags/themes/">Themes</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/elysia-05/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/imag/%e5%a4%a9%e5%8f%b0-05.jpg" loading="lazy" data-key="" data-hash="/imag/天台-05.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Elysia-05</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/elysia-04/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/imag/%e9%81%90%e8%9d%b6-04.jpg" loading="lazy" data-key="" data-hash="/imag/遐蝶-04.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Elysia-04</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/elysia-03/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/imag/%e7%88%b1%e8%8e%8902.jpg" loading="lazy" data-key="" data-hash="/imag/爱莉02.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Elysia-03</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/elysia-02/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/imag/%e7%88%b1%e8%8e%8903.jpg" loading="lazy" data-key="" data-hash="/imag/爱莉03.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Elysia-02</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/elysia-01/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/imag/%e7%88%b1%e8%8e%8901.jpg" loading="lazy" data-key="" data-hash="/imag/爱莉01.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Elysia-01</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 爱莉希雅
+    </section>
+    
+    <section class="powerby">
+        
+            爱莉爱莉爱莉 <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+
+<meting-js
+  server="netease"
+  type="playlist"
+  id="17831058065"
+  fixed="true"
+  mini="true"
+  autoplay="false"
+  loop="all"
+  order="random"
+  preload="auto"
+  list-folded="true">
+</meting-js>
+
+<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script> 
+
+
+    
+    <script src=https://Elysia492.github.io/js/topbar.min.js></script>
+
+
+<script>
+    var pjax = new Pjax({
+  selectors: [".main-container"]
+})
+
+pjax._handleResponse = pjax.handleResponse;
+
+pjax.handleResponse = function(responseText, request, href, options) {
+  if (request.responseText.match("<html")) {
+       
+                let newDom = new DOMParser().parseFromString(responseText, 'text/html');
+                
+                let bodyClass = newDom.body.className;
+                document.body.setAttribute("class", bodyClass)
+   setTimeout(() => {
+       pjax._handleResponse(responseText, request, href, options);
+   },500)
+  } else {
+    
+  }
+}
+
+
+topbar.config({
+    barColors: {
+        '0': 'rgba(255, 255, 255, 1)',   
+        '1.0': 'rgba(255, 105, 180, 1)'  
+    }
+});
+
+ document.addEventListener('pjax:send', () => {
+        
+        topbar.show();
+    })
+
+document.addEventListener('pjax:complete', () => {
+  window.Stack.init();
+  topbar.hide();
+})
+</script>
+<script>
+    
+
+
+
+
+const live2d_path = 'https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0-rc.6/dist/';
+
+const cssPath = "https://Elysia492.github.io/waifu/waifu.css"
+const waifuTipsJsonPath = "https://Elysia492.github.io/waifu/waifu-tips.json"
+
+
+function loadExternalResource(url, type) {
+  return new Promise((resolve, reject) => {
+    let tag;
+
+    if (type === 'css') {
+      tag = document.createElement('link');
+      tag.rel = 'stylesheet';
+      tag.href = url;
+    }
+    else if (type === 'js') {
+      tag = document.createElement('script');
+      tag.type = 'module';
+      tag.src = url;
+    }
+    if (tag) {
+      tag.onload = () => resolve(url);
+      tag.onerror = () => reject(url);
+      document.head.appendChild(tag);
+    }
+  });
+}
+
+(async () => {
+  
+  
+  
+
+  
+  
+  const OriginalImage = window.Image;
+  window.Image = function(...args) {
+    const img = new OriginalImage(...args);
+    img.crossOrigin = "anonymous";
+    return img;
+  };
+  window.Image.prototype = OriginalImage.prototype;
+  
+  
+  await Promise.all([
+    loadExternalResource(cssPath, 'css'),
+    loadExternalResource(live2d_path + 'waifu-tips.js', 'js')
+  ]);
+  
+  
+  initWidget({
+    waifuPath: waifuTipsJsonPath,
+    
+    cubism2Path: live2d_path + 'live2d.min.js',
+    cubism5Path: 'https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js',
+    tools: ['hitokoto', 'asteroids', 'switch-model', 'switch-texture', 'photo', 'info', 'quit'],
+    logLevel: 'warn',
+    drag: false,
+  });
+})();
+
+console.log(`\n%cLive2D%cWidget%c\n`, 'padding: 8px; background: #cd3e45; font-weight: bold; font-size: large; color: white;', 'padding: 8px; background: #ff5450; font-size: large; color: #eee;', '');
+
+
+
+
+
+
+</script>
+    </body>
+</html>
