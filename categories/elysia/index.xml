@@ -13,9 +13,9 @@
         <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
         
         <guid>https://Elysia492.github.io/p/elysia-06/</guid>
-        <description>&lt;img src="https://Elysia492.github.io/imag/08.jpg" alt="Featured image of post Elysia-06" /&gt;&lt;h1 id=&#34;1日志查询四剑客&#34;&gt;1.日志查询四剑客
-&lt;/h1&gt;&lt;h2 id=&#34;1head&#34;&gt;1.head
-&lt;/h2&gt;&lt;blockquote&gt;
+        <description>&lt;img src="https://Elysia492.github.io/imag/08.jpg" alt="Featured image of post Elysia-06" /&gt;&lt;h2 id=&#34;1日志查询四剑客&#34;&gt;1.日志查询四剑客
+&lt;/h2&gt;&lt;h3 id=&#34;1head&#34;&gt;1.head
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;默认查看文本前十行&lt;/p&gt;
 &lt;p&gt;head   -5   日志文件  ——&amp;gt;查看前五行&lt;/p&gt;
 &lt;p&gt;head -5和head -n5一样，tail同理&lt;/p&gt;
@@ -38,8 +38,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;2tail&#34;&gt;2.tail
-&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h3 id=&#34;2tail&#34;&gt;2.tail
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;默认查看文本最后十行&lt;/p&gt;
 &lt;p&gt;tail    -2   文本文件 ——&amp;gt;查看最后两行&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -94,8 +94,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;3less----按页显示文件内容&#34;&gt;3.less    按页显示文件内容
-&lt;/h2&gt;&lt;table&gt;
+&lt;h3 id=&#34;3less----按页显示文件内容&#34;&gt;3.less    按页显示文件内容
+&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;less快捷键&lt;/th&gt;
@@ -137,8 +137,8 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;4more---按页显示文件内容到达最后一行就自动退出&#34;&gt;4.more   按页显示文件内容，到达最后一行就自动退出
-&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h3 id=&#34;4more---按页显示文件内容到达最后一行就自动退出&#34;&gt;4.more   按页显示文件内容，到达最后一行就自动退出
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;more功能没有less多&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -172,15 +172,15 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;5小结&#34;&gt;5.小结
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;5小结&#34;&gt;5.小结
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;前后多少组合&lt;/li&gt;
 &lt;li&gt;head/tail&lt;/li&gt;
 &lt;li&gt;less/more&lt;/li&gt;
 &lt;li&gt;大文件避免用cat/vi/vim查看&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;2wc统计&#34;&gt;2.wc统计
-&lt;/h1&gt;&lt;ul&gt;
+&lt;h2 id=&#34;2wc统计&#34;&gt;2.wc统计
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;统计文件中单词情况，大小，行数，    ==未来工作中用于统计行数==&lt;/li&gt;
 &lt;li&gt;简单使用是统计文件的行数，未来还可以统计一些命令的结果有多少行（个）&lt;/li&gt;
 &lt;/ul&gt;
@@ -236,8 +236,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep 命令，过滤。在文件，命令结果中找到想要的内容
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;3查询命令位置&#34;&gt;3.查询命令位置
-&lt;/h1&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h2 id=&#34;3查询命令位置&#34;&gt;3.查询命令位置
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -273,8 +273,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls: /usr/bin/ls /usr/share/man/man1/ls.1.gz /usr/share/man/man1p/ls.1p.gz
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h1 id=&#34;4文件比较命令&#34;&gt;4.文件比较命令
-&lt;/h1&gt;&lt;ul&gt;
+&lt;/div&gt;&lt;h2 id=&#34;4文件比较命令&#34;&gt;4.文件比较命令
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;diff&lt;/li&gt;
 &lt;li&gt;vimdiff&lt;/li&gt;
 &lt;/ul&gt;
@@ -362,16 +362,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;h1 id=&#34;5排序去重组合&#34;&gt;5.排序去重组合
-&lt;/h1&gt;&lt;blockquote&gt;
+&lt;h2 id=&#34;5排序去重组合&#34;&gt;5.排序去重组合
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;统计日志,日志分析，系统信息统计，必备命令&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;sort：排序&lt;/li&gt;
 &lt;li&gt;uniq：去重&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;51-sort-排序&#34;&gt;5.1 sort 排序
-&lt;/h2&gt;&lt;table&gt;
+&lt;h3 id=&#34;51-sort-排序&#34;&gt;5.1 sort 排序
+&lt;/h3&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;sort选项&lt;/th&gt;
@@ -421,8 +421,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;什么选项也不加，按照每个数字第一个数进行排序
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;1按照数字排序&#34;&gt;1&amp;gt;按照数字排序
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;1按照数字排序&#34;&gt;1&amp;gt;按照数字排序
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -446,8 +446,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;number把要排序的内容当做是&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;数字&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;，按照数字大小进行排序，默认是升序排序（小——&amp;gt;大）
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;2倒序&#34;&gt;2&amp;gt;倒序
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;2倒序&#34;&gt;2&amp;gt;倒序
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -471,8 +471,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-nr  加了个r变成倒序
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;3按照某一列排序&#34;&gt;3&amp;gt;按照某一列排序
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;3按照某一列排序&#34;&gt;3&amp;gt;按照某一列排序
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -556,8 +556,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--.  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; root root     &lt;span class=&#34;m&#34;&gt;5122&lt;/span&gt; Jun &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;2021&lt;/span&gt; makedumpfile.conf.sample
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;4对指定分隔符排序&#34;&gt;4&amp;gt;对指定分隔符排序
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;4对指定分隔符排序&#34;&gt;4&amp;gt;对指定分隔符排序
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -603,8 +603,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;5多列排序&#34;&gt;5&amp;gt;多列排序
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;5多列排序&#34;&gt;5&amp;gt;多列排序
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -721,8 +721,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;52-uniq&#34;&gt;5.2 uniq
-&lt;/h2&gt;&lt;p&gt;可以吧重复的合在一起&lt;/p&gt;
+&lt;h3 id=&#34;52-uniq&#34;&gt;5.2 uniq
+&lt;/h3&gt;&lt;p&gt;可以吧重复的合在一起&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;用法示例&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -852,14 +852,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;h1 id=&#34;6日期组合&#34;&gt;6.日期组合
-&lt;/h1&gt;&lt;ul&gt;
+&lt;h2 id=&#34;6日期组合&#34;&gt;6.日期组合
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;==date==&lt;/li&gt;
 &lt;li&gt;ntpdate&lt;/li&gt;
 &lt;li&gt;特殊符号&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;61-date&#34;&gt;6.1 date
-&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h3 id=&#34;61-date&#34;&gt;6.1 date
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;时间命令，主要查看或修改时间。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1043,8 +1043,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;62-ntpdate-同步时间命令&#34;&gt;6.2 ntpdate 同步时间命令
-&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h3 id=&#34;62-ntpdate-同步时间命令&#34;&gt;6.2 ntpdate 同步时间命令
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1070,8 +1070,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;63-修改时区&#34;&gt;6.3 修改时区
-&lt;/h2&gt;&lt;p&gt;timedatectl 查看时区&lt;/p&gt;
+&lt;h3 id=&#34;63-修改时区&#34;&gt;6.3 修改时区
+&lt;/h3&gt;&lt;p&gt;timedatectl 查看时区&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1126,8 +1126,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;64-反引号&#34;&gt;6.4 反引号``
-&lt;/h2&gt;&lt;p&gt;反引号里面的内容优先执行&lt;/p&gt;
+&lt;h3 id=&#34;64-反引号&#34;&gt;6.4 反引号``
+&lt;/h3&gt;&lt;p&gt;反引号里面的内容优先执行&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1205,6 +1205,14 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 </description>
+        </item>
+        <item>
+        <title>Elysia-07</title>
+        <link>https://Elysia492.github.io/p/elysia-07/</link>
+        <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://Elysia492.github.io/p/elysia-07/</guid>
+        <description>&lt;img src="https://Elysia492.github.io/imag/09.jpg" alt="Featured image of post Elysia-07" /&gt;</description>
         </item>
         <item>
         <title>Elysia-05</title>

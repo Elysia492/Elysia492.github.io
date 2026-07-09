@@ -285,31 +285,40 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#1head">1.head</a></li>
-    <li><a href="#2tail">2.tail</a></li>
-    <li><a href="#3less----按页显示文件内容">3.less    按页显示文件内容</a></li>
-    <li><a href="#4more---按页显示文件内容到达最后一行就自动退出">4.more   按页显示文件内容，到达最后一行就自动退出</a></li>
-    <li><a href="#5小结">5.小结</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#51-sort-排序">5.1 sort 排序</a>
+    <li><a href="#1日志查询四剑客">1.日志查询四剑客</a>
       <ol>
-        <li><a href="#1按照数字排序">1&gt;按照数字排序</a></li>
-        <li><a href="#2倒序">2&gt;倒序</a></li>
-        <li><a href="#3按照某一列排序">3&gt;按照某一列排序</a></li>
-        <li><a href="#4对指定分隔符排序">4&gt;对指定分隔符排序</a></li>
-        <li><a href="#5多列排序">5&gt;多列排序</a></li>
+        <li><a href="#1head">1.head</a></li>
+        <li><a href="#2tail">2.tail</a></li>
+        <li><a href="#3less----按页显示文件内容">3.less    按页显示文件内容</a></li>
+        <li><a href="#4more---按页显示文件内容到达最后一行就自动退出">4.more   按页显示文件内容，到达最后一行就自动退出</a></li>
+        <li><a href="#5小结">5.小结</a></li>
       </ol>
     </li>
-    <li><a href="#52-uniq">5.2 uniq</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#61-date">6.1 date</a></li>
-    <li><a href="#62-ntpdate-同步时间命令">6.2 ntpdate 同步时间命令</a></li>
-    <li><a href="#63-修改时区">6.3 修改时区</a></li>
-    <li><a href="#64-反引号">6.4 反引号``</a></li>
+    <li><a href="#2wc统计">2.wc统计</a></li>
+    <li><a href="#3查询命令位置">3.查询命令位置</a></li>
+    <li><a href="#4文件比较命令">4.文件比较命令</a></li>
+    <li><a href="#5排序去重组合">5.排序去重组合</a>
+      <ol>
+        <li><a href="#51-sort-排序">5.1 sort 排序</a>
+          <ol>
+            <li><a href="#1按照数字排序">1&gt;按照数字排序</a></li>
+            <li><a href="#2倒序">2&gt;倒序</a></li>
+            <li><a href="#3按照某一列排序">3&gt;按照某一列排序</a></li>
+            <li><a href="#4对指定分隔符排序">4&gt;对指定分隔符排序</a></li>
+            <li><a href="#5多列排序">5&gt;多列排序</a></li>
+          </ol>
+        </li>
+        <li><a href="#52-uniq">5.2 uniq</a></li>
+      </ol>
+    </li>
+    <li><a href="#6日期组合">6.日期组合</a>
+      <ol>
+        <li><a href="#61-date">6.1 date</a></li>
+        <li><a href="#62-ntpdate-同步时间命令">6.2 ntpdate 同步时间命令</a></li>
+        <li><a href="#63-修改时区">6.3 修改时区</a></li>
+        <li><a href="#64-反引号">6.4 反引号``</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -387,9 +396,9 @@
     <section class="article-content">
     
     
-    <h1 id="1日志查询四剑客">1.日志查询四剑客
-</h1><h2 id="1head">1.head
-</h2><blockquote>
+    <h2 id="1日志查询四剑客">1.日志查询四剑客
+</h2><h3 id="1head">1.head
+</h3><blockquote>
 <p>默认查看文本前十行</p>
 <p>head   -5   日志文件  ——&gt;查看前五行</p>
 <p>head -5和head -n5一样，tail同理</p>
@@ -412,8 +421,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h2 id="2tail">2.tail
-</h2><blockquote>
+<h3 id="2tail">2.tail
+</h3><blockquote>
 <p>默认查看文本最后十行</p>
 <p>tail    -2   文本文件 ——&gt;查看最后两行</p>
 <div class="highlight"><div class="chroma">
@@ -468,8 +477,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h2 id="3less----按页显示文件内容">3.less    按页显示文件内容
-</h2><div class="table-wrapper"><table>
+<h3 id="3less----按页显示文件内容">3.less    按页显示文件内容
+</h3><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>less快捷键</th>
@@ -511,8 +520,8 @@
 </tr>
 </tbody>
 </table></div>
-<h2 id="4more---按页显示文件内容到达最后一行就自动退出">4.more   按页显示文件内容，到达最后一行就自动退出
-</h2><blockquote>
+<h3 id="4more---按页显示文件内容到达最后一行就自动退出">4.more   按页显示文件内容，到达最后一行就自动退出
+</h3><blockquote>
 <p>more功能没有less多</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -546,15 +555,15 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h2 id="5小结">5.小结
-</h2><ul>
+<h3 id="5小结">5.小结
+</h3><ul>
 <li>前后多少组合</li>
 <li>head/tail</li>
 <li>less/more</li>
 <li>大文件避免用cat/vi/vim查看</li>
 </ul>
-<h1 id="2wc统计">2.wc统计
-</h1><ul>
+<h2 id="2wc统计">2.wc统计
+</h2><ul>
 <li>统计文件中单词情况，大小，行数，    ==未来工作中用于统计行数==</li>
 <li>简单使用是统计文件的行数，未来还可以统计一些命令的结果有多少行（个）</li>
 </ul>
@@ -610,8 +619,8 @@
 </span></span><span class="line"><span class="cl">grep 命令，过滤。在文件，命令结果中找到想要的内容
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="3查询命令位置">3.查询命令位置
-</h1><div class="highlight"><div class="chroma">
+</div><h2 id="3查询命令位置">3.查询命令位置
+</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -647,8 +656,8 @@
 </span></span><span class="line"><span class="cl">ls: /usr/bin/ls /usr/share/man/man1/ls.1.gz /usr/share/man/man1p/ls.1p.gz
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="4文件比较命令">4.文件比较命令
-</h1><ul>
+</div><h2 id="4文件比较命令">4.文件比较命令
+</h2><ul>
 <li>diff</li>
 <li>vimdiff</li>
 </ul>
@@ -736,16 +745,16 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h1 id="5排序去重组合">5.排序去重组合
-</h1><blockquote>
+<h2 id="5排序去重组合">5.排序去重组合
+</h2><blockquote>
 <p>统计日志,日志分析，系统信息统计，必备命令</p>
 </blockquote>
 <ul>
 <li>sort：排序</li>
 <li>uniq：去重</li>
 </ul>
-<h2 id="51-sort-排序">5.1 sort 排序
-</h2><div class="table-wrapper"><table>
+<h3 id="51-sort-排序">5.1 sort 排序
+</h3><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>sort选项</th>
@@ -795,8 +804,8 @@
 </span></span><span class="line"><span class="cl">什么选项也不加，按照每个数字第一个数进行排序
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="1按照数字排序">1&gt;按照数字排序
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="1按照数字排序">1&gt;按照数字排序
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -820,8 +829,8 @@
 </span></span><span class="line"><span class="cl"><span class="nv">number把要排序的内容当做是</span><span class="o">==</span><span class="nv">数字</span><span class="o">==</span>，按照数字大小进行排序，默认是升序排序（小——&gt;大）
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="2倒序">2&gt;倒序
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="2倒序">2&gt;倒序
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -845,8 +854,8 @@
 </span></span><span class="line"><span class="cl">-nr  加了个r变成倒序
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="3按照某一列排序">3&gt;按照某一列排序
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="3按照某一列排序">3&gt;按照某一列排序
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -930,8 +939,8 @@
 </span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">5122</span> Jun <span class="m">10</span>  <span class="m">2021</span> makedumpfile.conf.sample
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="4对指定分隔符排序">4&gt;对指定分隔符排序
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="4对指定分隔符排序">4&gt;对指定分隔符排序
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -977,8 +986,8 @@
 </span></span><span class="line"><span class="cl">...
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="5多列排序">5&gt;多列排序
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="5多列排序">5&gt;多列排序
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -1095,8 +1104,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h2 id="52-uniq">5.2 uniq
-</h2><p>可以吧重复的合在一起</p>
+<h3 id="52-uniq">5.2 uniq
+</h3><p>可以吧重复的合在一起</p>
 <blockquote>
 <p>用法示例</p>
 <div class="highlight"><div class="chroma">
@@ -1226,14 +1235,14 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h1 id="6日期组合">6.日期组合
-</h1><ul>
+<h2 id="6日期组合">6.日期组合
+</h2><ul>
 <li>==date==</li>
 <li>ntpdate</li>
 <li>特殊符号</li>
 </ul>
-<h2 id="61-date">6.1 date
-</h2><blockquote>
+<h3 id="61-date">6.1 date
+</h3><blockquote>
 <p>时间命令，主要查看或修改时间。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1417,8 +1426,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h2 id="62-ntpdate-同步时间命令">6.2 ntpdate 同步时间命令
-</h2><blockquote>
+<h3 id="62-ntpdate-同步时间命令">6.2 ntpdate 同步时间命令
+</h3><blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1444,8 +1453,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h2 id="63-修改时区">6.3 修改时区
-</h2><p>timedatectl 查看时区</p>
+<h3 id="63-修改时区">6.3 修改时区
+</h3><p>timedatectl 查看时区</p>
 <blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1500,8 +1509,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h2 id="64-反引号">6.4 反引号``
-</h2><p>反引号里面的内容优先执行</p>
+<h3 id="64-反引号">6.4 反引号``
+</h3><p>反引号里面的内容优先执行</p>
 <blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1614,6 +1623,25 @@
             
                 
 <article class="has-image">
+    <a href="/p/elysia-07/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/imag/09.jpg" loading="lazy" data-key="" data-hash="/imag/09.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Elysia-07</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/p/elysia-05/">
         
         
@@ -1683,25 +1711,6 @@
 
         <div class="article-details">
             <h2 class="article-title">Elysia-02</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/elysia-01/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/imag/%e7%88%b1%e8%8e%8901.jpg" loading="lazy" data-key="" data-hash="/imag/爱莉01.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Elysia-01</h2>
         </div>
     </a>
 </article>
