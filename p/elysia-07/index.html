@@ -10,7 +10,7 @@
 <meta property='og:description' content="Linux文件属性及打包压缩三剑客">
 <meta property='og:url' content='https://Elysia492.github.io/p/elysia-07/'>
 <meta property='og:site_name' content='爱莉希雅♪'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='css' /><meta property='article:tag' content='html' /><meta property='article:tag' content='themes' /><meta property='article:published_time' content='2026-07-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-07-09T00:00:00&#43;00:00'/><meta property='og:image' content='https://Elysia492.github.io/imag/09.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='markdown' /><meta property='article:tag' content='css' /><meta property='article:tag' content='html' /><meta property='article:tag' content='themes' /><meta property='article:published_time' content='2026-09-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-09-03T00:00:00&#43;00:00'/><meta property='og:image' content='https://Elysia492.github.io/imag/09.jpg' />
 <meta name="twitter:title" content="Elysia-07">
 <meta name="twitter:description" content="Linux文件属性及打包压缩三剑客"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://Elysia492.github.io/imag/09.jpg' />
@@ -263,7 +263,76 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1文件属性">1.文件属性</a>
+      <ol>
+        <li><a href="#1inode索引节点和block磁盘空间">1.inode(索引节点)和block(磁盘空间)</a></li>
+        <li><a href="#2文件类型">2.文件类型</a>
+          <ol>
+            <li><a href="#1liinux文件类型">1.liinux文件类型</a></li>
+            <li><a href="#2如何查看文件类型">2.如何查看文件类型</a></li>
+          </ol>
+        </li>
+        <li><a href="#3软硬链接">3.软硬链接</a>
+          <ol>
+            <li><a href="#1概述">1.概述</a></li>
+            <li><a href="#2如何创建">2.如何创建</a></li>
+          </ol>
+        </li>
+        <li><a href="#4查看文件大小">4.查看文件大小</a></li>
+        <li><a href="#5时间">5.时间</a></li>
+        <li><a href="#6小结">6.小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#2打包压缩三剑客">2.打包压缩三剑客</a>
+      <ol>
+        <li><a href="#1概述-1">1.概述</a></li>
+        <li><a href="#2tarstar">2.tar⭐⭐⭐:star:</a>
+          <ol>
+            <li><a href="#1创建压缩包starstarstarstar">1.创建压缩包:star::star::star::star:</a></li>
+            <li><a href="#2查看压缩包内容starstarstarstar">2.查看压缩包内容:star::star::star::star:</a></li>
+            <li><a href="#3解压压缩包-starstarstarstar">3.解压压缩包 :star::star::star::star:</a></li>
+            <li><a href="#4解压到指定目录starstarstarstar">4.解压到指定目录:star::star::star::star:</a></li>
+            <li><a href="#5tar从成员名中删除开头的">5.tar：从成员名中删除开头的“/”</a></li>
+            <li><a href="#6小结-1">6.小结</a></li>
+          </ol>
+        </li>
+        <li><a href="#3gzip">3.gzip</a></li>
+        <li><a href="#4zipunzip">4.zip/unzip</a></li>
+        <li><a href="#5小结">5.小结</a></li>
+      </ol>
+    </li>
+    <li><a href="#3总结-1">3.总结</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="has-image main-article">
@@ -316,7 +385,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2026-07-09</time>
+                <time class="article-time--published">2026-09-03</time>
             </div>
         
 
@@ -332,7 +401,907 @@
     <section class="article-content">
     
     
-    
+    <h2 id="1文件属性">1.文件属性
+</h2><h3 id="1inode索引节点和block磁盘空间">1.inode(索引节点)和block(磁盘空间)
+</h3><p><strong>df -h和df -i</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">block
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">df     查看磁盘空间
+</span></span><span class="line"><span class="cl">df -h  以人类可读形式查看
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># df</span>
+</span></span><span class="line"><span class="cl">Filesystem     1K-blocks    Used Available Use% Mounted on
+</span></span><span class="line"><span class="cl">devtmpfs          <span class="m">976108</span>       <span class="m">0</span>    <span class="m">976108</span>   0% /dev
+</span></span><span class="line"><span class="cl">tmpfs             <span class="m">987224</span>       <span class="m">0</span>    <span class="m">987224</span>   0% /dev/shm
+</span></span><span class="line"><span class="cl">tmpfs             <span class="m">987224</span>    <span class="m">1448</span>    <span class="m">985776</span>   1% /run
+</span></span><span class="line"><span class="cl">tmpfs             <span class="m">987224</span>       <span class="m">0</span>    <span class="m">987224</span>   0% /sys/fs/cgroup
+</span></span><span class="line"><span class="cl">/dev/vda1       <span class="m">41152716</span> <span class="m">7004416</span>  <span class="m">32349460</span>  18% /
+</span></span><span class="line"><span class="cl">tmpfs             <span class="m">197448</span>       <span class="m">0</span>    <span class="m">197448</span>   0% /run/user/0
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># df -h</span>
+</span></span><span class="line"><span class="cl">Filesystem      Size  Used Avail Use% Mounted on
+</span></span><span class="line"><span class="cl">devtmpfs        954M     <span class="m">0</span>  954M   0% /dev
+</span></span><span class="line"><span class="cl">tmpfs           965M     <span class="m">0</span>  965M   0% /dev/shm
+</span></span><span class="line"><span class="cl">tmpfs           965M  1.5M  963M   1% /run
+</span></span><span class="line"><span class="cl">tmpfs           965M     <span class="m">0</span>  965M   0% /sys/fs/cgroup
+</span></span><span class="line"><span class="cl">/dev/vda1        40G  6.7G   31G  18% /
+</span></span><span class="line"><span class="cl">tmpfs           193M     <span class="m">0</span>  193M   0% /run/user/0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">inode
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># df -i</span>
+</span></span><span class="line"><span class="cl">Filesystem      Inodes IUsed   IFree IUse% Mounted on
+</span></span><span class="line"><span class="cl">devtmpfs        <span class="m">244027</span>   <span class="m">358</span>  <span class="m">243669</span>    1% /dev
+</span></span><span class="line"><span class="cl">tmpfs           <span class="m">246806</span>     <span class="m">1</span>  <span class="m">246805</span>    1% /dev/shm
+</span></span><span class="line"><span class="cl">tmpfs           <span class="m">246806</span>   <span class="m">659</span>  <span class="m">246147</span>    1% /run
+</span></span><span class="line"><span class="cl">tmpfs           <span class="m">246806</span>    <span class="m">16</span>  <span class="m">246790</span>    1% /sys/fs/cgroup
+</span></span><span class="line"><span class="cl">/dev/vda1      <span class="m">2621440</span> <span class="m">81730</span> <span class="m">2539710</span>    4% /
+</span></span><span class="line"><span class="cl">tmpfs           <span class="m">246806</span>     <span class="m">1</span>  <span class="m">246805</span>    1% /run/user/0
+</span></span><span class="line"><span class="cl">               总数      已用  可用
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>文件名是放在block中的，不在inode中 ，所以文件名不是文件属性</p>
+</blockquote>
+<h3 id="2文件类型">2.文件类型
+</h3><h4 id="1liinux文件类型">1.liinux文件类型
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ll -hi </span>
+</span></span><span class="line"><span class="cl">total 284K
+</span></span><span class="line"><span class="cl"><span class="m">132941</span> -rw-r--r-- <span class="m">1</span> root root 248K Jul  <span class="m">8</span> 16:20 attack.log
+</span></span><span class="line"><span class="cl"><span class="m">786433</span> drwxr-xr-x <span class="m">3</span> root root 4.0K Jun <span class="m">22</span> 10:48 elysia
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;-&#34;</span>代表文件  <span class="s2">&#34;d&#34;</span>代表文件夹  <span class="s2">&#34;l&#34;</span>软链接，，，，应该还有其他的
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Linux不区分扩展名，但是建议创建文件的时候加上</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>常用扩展名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.txt</td>
+<td>普通文件</td>
+</tr>
+<tr>
+<td>.sh   .bash</td>
+<td>shell脚本</td>
+</tr>
+<tr>
+<td>.conf   .cfg   .xml   .yaml   .yml</td>
+<td>配置文件</td>
+</tr>
+<tr>
+<td>.py</td>
+<td>python脚本文件</td>
+</tr>
+</tbody>
+</table></div>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Linux常见文件类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>-</strong></td>
+<td>文件file，范围较广</td>
+</tr>
+<tr>
+<td><strong>d</strong></td>
+<td>目录，directory</td>
+</tr>
+<tr>
+<td><strong>l</strong></td>
+<td>软连接，类似于windows的快捷方式</td>
+</tr>
+<tr>
+<td>c</td>
+<td>字符设备  char 特殊文件 ，不断输出，吸入</td>
+</tr>
+<tr>
+<td>b</td>
+<td>块设备 block 硬盘</td>
+</tr>
+<tr>
+<td>s</td>
+<td>套接字 socket文件</td>
+</tr>
+<tr>
+<td>p</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="2如何查看文件类型">2.如何查看文件类型
+</h4><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>文件的分类</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>普通文件（文本文件），我们日常可以查看或直接修改，平时书写就是这种，脚本。</td>
+</tr>
+<tr>
+<td>data</td>
+<td>数据文件，需要用专用命令查看。比如压缩包</td>
+</tr>
+<tr>
+<td>二进制文件</td>
+<td>大部分都是命令</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>file + 文件或目录可查看属性</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ll /etc/hostname /var/log/wtmp /bin/ls</span>
+</span></span><span class="line"><span class="cl">-rwxr-xr-x. <span class="m">1</span> root root <span class="m">117608</span> Aug <span class="m">20</span>  <span class="m">2019</span> /bin/ls
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root      <span class="m">7</span> Sep <span class="m">18</span>  <span class="m">2025</span> /etc/hostname
+</span></span><span class="line"><span class="cl">-rw-rw-r--  <span class="m">1</span> root utmp  <span class="m">38016</span> Jul <span class="m">28</span> 00:13 /var/log/wtmp
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># file /etc/hostname /var/log/wtmp /bin/ls /elysia/</span>
+</span></span><span class="line"><span class="cl">/etc/hostname: ASCII text
+</span></span><span class="line"><span class="cl">/var/log/wtmp: data
+</span></span><span class="line"><span class="cl">/bin/ls:       ELF 64-bit LSB executable, x86-64, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, dynamically linked <span class="o">(</span>uses shared libs<span class="o">)</span>, <span class="k">for</span> GNU/Linux 2.6.32, BuildID<span class="o">[</span>sha1<span class="o">]=</span>aaf05615b6c91d3cbb076af81aeff531c5d7dfd9, stripped
+</span></span><span class="line"><span class="cl">/elysia/:      directory
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3软硬链接">3.软硬链接
+</h3><h4 id="1概述">1.概述
+</h4><ul>
+<li>软链接：类似windows的快捷方式，也是一种文件；用于存放源文件的路径（位置+名字），应用最多。</li>
+<li>硬链接：同一分区中，不同文件的inode号码相同了，这些文件互为硬链接，很少使用。</li>
+</ul>
+<h4 id="2如何创建">2.如何创建
+</h4><h5 id="1软链接">1.软链接
+</h5><blockquote>
+<p><strong>命令</strong>：</p>
+<p>ln   -s   软链接指向的源文件    软链接名字和路径</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">相对路径
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># ln -s test.txt  test.txt_soft</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># ll</span>
+</span></span><span class="line"><span class="cl">total <span class="m">0</span>
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root <span class="m">0</span> Aug  <span class="m">8</span> 10:55 test.txt
+</span></span><span class="line"><span class="cl">lrwxrwxrwx <span class="m">1</span> root root <span class="m">8</span> Aug  <span class="m">8</span> 10:56 test.txt_soft -&gt; test.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># cat test.txt_soft</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># cat test.txt_soft_jue </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">绝对路径
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># pwd</span>
+</span></span><span class="line"><span class="cl">/root/new
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># ln -s /root/new/test.txt test.txt_soft_jue</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># ll</span>
+</span></span><span class="line"><span class="cl">total <span class="m">0</span>
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root  <span class="m">0</span> Aug  <span class="m">8</span> 10:55 test.txt
+</span></span><span class="line"><span class="cl">lrwxrwxrwx <span class="m">1</span> root root  <span class="m">8</span> Aug  <span class="m">8</span> 10:56 test.txt_soft -&gt; test.txt
+</span></span><span class="line"><span class="cl">lrwxrwxrwx <span class="m">1</span> root root <span class="m">18</span> Aug  <span class="m">8</span> 11:07 test.txt_soft_jue -&gt; /root/new/test.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># cat test.txt_soft</span>
+</span></span><span class="line"><span class="cl"><span class="m">666</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># cat test.txt_soft_jue </span>
+</span></span><span class="line"><span class="cl"><span class="m">666</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">把这俩移到/mnt/下
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># mv test.txt_s*  /mnt/</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># cd /mnt</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia mnt<span class="o">]</span><span class="c1"># ls</span>
+</span></span><span class="line"><span class="cl">test.txt_soft  test.txt_soft_jue
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia mnt<span class="o">]</span><span class="c1"># cat test.txt_soft</span>
+</span></span><span class="line"><span class="cl">cat: test.txt_soft: No such file or directory     ----- 相对路径创建的软链接移动后报错，无法查看
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia mnt<span class="o">]</span><span class="c1"># cat test.txt_soft_jue         </span>
+</span></span><span class="line"><span class="cl"><span class="m">666</span>                                               ----- 绝对路径创建的软链接移动后没有报错，可以查看
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
+<h5 id="2硬链接很少使用">2.硬链接（很少使用）
+</h5><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">创建硬链接命令   ln  + 源文件 +  硬链接文件
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># ln  /root/new/test.txt  test.txt_hard</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># ls</span>
+</span></span><span class="line"><span class="cl">test.txt  test.txt_hard  test.txt_soft_jue
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia new<span class="o">]</span><span class="c1"># ll -i</span>
+</span></span><span class="line"><span class="cl">total <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="m">786438</span> -rw-r--r-- <span class="m">2</span> root root  <span class="m">0</span> Aug  <span class="m">8</span> 10:55 test.txt
+</span></span><span class="line"><span class="cl"><span class="m">786438</span> -rw-r--r-- <span class="m">2</span> root root  <span class="m">0</span> Aug  <span class="m">8</span> 10:55 test.txt_hard
+</span></span><span class="line"><span class="cl"><span class="m">786441</span> lrwxrwxrwx <span class="m">1</span> root root <span class="m">18</span> Aug <span class="m">15</span> 09:58 test.txt_soft_jue -&gt; /root/new/test.txt
+</span></span><span class="line"><span class="cl">硬链接和源文件inode号码相同， 后年标着2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="3总结">3.总结
+</h5><p>软硬链接使用方法上类似</p>
+<p>区别（面试必会）：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>软链接</th>
+<th>硬链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指向文件名</td>
+<td>指向inode号码</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>啥意思</li>
+</ul>
+<ol>
+<li>
+<p>软连接（符号链接） softlink/symlink，类似于 Windows 快捷方式，存放源文件的位置。</p>
+</li>
+<li>
+<p>硬链接：同一个分区中 inode 号码相同的文件，互为硬链接。</p>
+</li>
+</ol>
+<ul>
+<li>咋来的</li>
+</ul>
+<p>软连接通过 ln -s 创建，硬链接通过 ln 创建。</p>
+<ul>
+<li>特点</li>
+</ul>
+<ol>
+<li>
+<p>软连接是比较常用的，可以给文件、目录创建。</p>
+</li>
+<li>
+<p>硬链接只能给文件创建，不能跨分区，无法给目录创建硬链接，较少使用。</p>
+</li>
+</ol>
+<ul>
+<li>咋没的</li>
+</ul>
+<ol>
+<li>
+<p>删除软连接，源文件不受影响。</p>
+</li>
+<li>
+<p>删除源文件，软连接无法使用，红底白字闪烁。</p>
+</li>
+<li>
+<p>删除硬链接，源文件，软连接无影响。</p>
+</li>
+<li>
+<p>删除源文件和硬链接，这个文件就被删除了</p>
+</li>
+</ol>
+<h3 id="4查看文件大小">4.查看文件大小
+</h3><ul>
+<li>查看文件大</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">ll  -h   /etc/
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ll -h /etc/</span>
+</span></span><span class="line"><span class="cl">total 1.5M
+</span></span><span class="line"><span class="cl">drwxr-xr-x.  <span class="m">3</span> root root   4.0K Jan <span class="m">26</span>  <span class="m">2021</span> abrt
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">16</span> Jan <span class="m">26</span>  <span class="m">2021</span> adjtime
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root   1.5K Apr  <span class="m">1</span>  <span class="m">2020</span> aliases
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root    12K Jan <span class="m">26</span>  <span class="m">2021</span> aliases.db
+</span></span><span class="line"><span class="cl">drwxr-xr-x.  <span class="m">2</span> root root   4.0K Dec  <span class="m">5</span>  <span class="m">2023</span> alternatives
+</span></span><span class="line"><span class="cl">-rw-------.  <span class="m">1</span> root root    <span class="m">541</span> Aug  <span class="m">9</span>  <span class="m">2019</span> anacrontab
+</span></span><span class="line"><span class="cl">-rw-r--r--.  <span class="m">1</span> root root     <span class="m">55</span> Aug  <span class="m">8</span>  <span class="m">2019</span> asound.conf
+</span></span><span class="line"><span class="cl">.....
+</span></span><span class="line"><span class="cl">显示文件大小和文件夹名字大小
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ll -h /etc/hosts
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ll -h /etc/hosts</span>
+</span></span><span class="line"><span class="cl">-rw-r--r--. <span class="m">1</span> root root <span class="m">207</span> Sep <span class="m">18</span>  <span class="m">2025</span> /etc/hosts
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>查看目录大小</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">du   -sh   /etc/
+</span></span><span class="line"><span class="cl">查看指定目录所占的空间.<span class="o">(</span>block<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># du   -sh   /etc/</span>
+</span></span><span class="line"><span class="cl">36M	/etc/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">du  /etc/
+</span></span><span class="line"><span class="cl">如果不加-sh（不指定目录），会显示目标目录下所有目录的大小,最后给出目标目录大小
+</span></span><span class="line"><span class="cl">-h:以人类可读形式显示
+</span></span><span class="line"><span class="cl">-s:不要显示目录中所有的子目录了，只显示汇总信息，不显示所有
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># du      /etc/</span>
+</span></span><span class="line"><span class="cl">12	/etc/infiniband-diags
+</span></span><span class="line"><span class="cl">4	/etc/opt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">.....
+</span></span><span class="line"><span class="cl">8	/etc/gss
+</span></span><span class="line"><span class="cl">8	/etc/plymouth
+</span></span><span class="line"><span class="cl">36116	/etc/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5时间">5.时间
+</h3><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Linux时间</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mtime</td>
+<td>modify  修改时间，最常用  （文件里面有内容变化了）</td>
+</tr>
+<tr>
+<td>atime</td>
+<td>access  访问时间</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>change   文件属性的变化时间（文件属性变了，大小，权限，软硬链接）</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>stat + 文件名   查看文件的属性信息</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># stat /etc/</span>
+</span></span><span class="line"><span class="cl">  File: ‘/etc/’
+</span></span><span class="line"><span class="cl">  Size: <span class="m">12288</span>     	Blocks: <span class="m">24</span>         IO Block: <span class="m">4096</span>   directory
+</span></span><span class="line"><span class="cl">Device: fd01h/64769d	Inode: <span class="m">393218</span>      Links: <span class="m">94</span>
+</span></span><span class="line"><span class="cl">Access: <span class="o">(</span>0755/drwxr-xr-x<span class="o">)</span>  Uid: <span class="o">(</span>    0/    root<span class="o">)</span>   Gid: <span class="o">(</span>    0/    root<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Access: 2026-08-15 13:05:55.162536449 +0800       —————— atime
+</span></span><span class="line"><span class="cl">Modify: 2026-06-08 06:54:49.970965223 +0800       —————— mtime
+</span></span><span class="line"><span class="cl">Change: 2026-06-08 06:54:49.970965223 +0800       —————— ctime
+</span></span><span class="line"><span class="cl"> Birth: -
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="6小结">6.小结
+</h3><ul>
+<li>核心：熟练掌握什么是inode和block</li>
+<li>核心： 熟练掌握常见的文件类型</li>
+<li>核心：熟练掌握软硬链接的区别</li>
+<li>核心：熟练掌握什么是mtime</li>
+<li>命令：df, file, du, ln -s</li>
+</ul>
+<h2 id="2打包压缩三剑客">2.打包压缩三剑客
+</h2><h3 id="1概述-1">1.概述
+</h3><blockquote>
+<p>工作中对多个文件备份时，用cp命令会占用过大空间，所以用压缩来解决这个问题</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>压缩命令</th>
+<th>应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tar⭐⭐⭐</td>
+<td>大部分场景可使用tar，==创建，查看，解压，解压到指定目录==</td>
+</tr>
+<tr>
+<td>gzip</td>
+<td>一般配合其他命令使用</td>
+</tr>
+<tr>
+<td>zip、unzip</td>
+<td>一般用于解压zip格式的压缩包unzip</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="2tarstar">2.tar⭐⭐⭐:star:
+</h3><ul>
+<li>
+<p>windows：压缩</p>
+</li>
+<li>
+<p>Linux：打包压缩</p>
+<p>打包：文件放在一起  tar</p>
+<p>压缩：文件压缩在一起，节省空间  tar命令的选项</p>
+</li>
+<li>
+<p>tar命令要熟练掌握的功能：</p>
+<p>创建压缩包；</p>
+<p>查看压缩包;</p>
+<p>解压压缩包；</p>
+<p>解压压缩包到指定目录；</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>tar命令</th>
+<th>选项与说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>创建  zcf</td>
+<td>tar  zcf   压缩包    被压缩的文件/目录</td>
+</tr>
+<tr>
+<td>查看   tf</td>
+<td>tar   tf    /tmp/etc.tar.gz</td>
+</tr>
+<tr>
+<td>解压   xf</td>
+<td>tar   xf    /tmp/erc.tar.gz</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+</ul>
+<h4 id="1创建压缩包starstarstarstar">1.创建压缩包:star::star::star::star:
+</h4><blockquote>
+<p>需要指定压缩包存放位置和名字还有被压缩的文件或目录。</p>
+</blockquote>
+<p>例：把/etc/目录压缩，压缩包放在/tmp/etc.tar.gz</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">tar  zcvf  /tmp/etc.tar.gz   /etc/
+</span></span><span class="line"><span class="cl">tar  zcf  /tmp/etc.tar.gz   /etc/
+</span></span><span class="line"><span class="cl">v verbose 显示过程（未来不加）
+</span></span><span class="line"><span class="cl">c create 创建包（打包），如果只放cf选项就是打包，不压缩
+</span></span><span class="line"><span class="cl">z gzip tar命令创建包后，通过gzip压缩工具进行压缩   tar打包  gz压缩  .tar.gz扩展名
+</span></span><span class="line"><span class="cl">f file 指定压缩包，f选项放在这几个选项最后
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># tar zcvf  /tmp/etc.tar.gz  /etc/</span>
+</span></span><span class="line"><span class="cl">tar: Removing leading <span class="sb">`</span>/<span class="err">&#39;</span> from member names
+</span></span><span class="line"><span class="cl">/etc/
+</span></span><span class="line"><span class="cl">/etc/centos-release-upstream
+</span></span><span class="line"><span class="cl">/etc/subuid
+</span></span><span class="line"><span class="cl">....
+</span></span><span class="line"><span class="cl">....
+</span></span><span class="line"><span class="cl">/etc/login.defs
+</span></span><span class="line"><span class="cl">/etc/filesystems
+</span></span><span class="line"><span class="cl">/etc/inputrc
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ll /tmp</span>
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root root <span class="m">10635925</span> Aug <span class="m">18</span> 15:28 etc.tar.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2查看压缩包内容starstarstarstar">2.查看压缩包内容:star::star::star::star:
+</h4><blockquote>
+<p>核心指定好压缩包名字和位置</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">tar  ztvf   /tmp/etc.tar.gz
+</span></span><span class="line"><span class="cl">tar  tf   /tmp/etc.tar.gz    未来用这个
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">t  list  列表，查看压缩包内容
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># tar  tf  /tmp/etc.tar.gz </span>
+</span></span><span class="line"><span class="cl">etc/
+</span></span><span class="line"><span class="cl">etc/centos-release-upstream
+</span></span><span class="line"><span class="cl">etc/subuid
+</span></span><span class="line"><span class="cl">etc/printcap
+</span></span><span class="line"><span class="cl">.......
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3解压压缩包-starstarstarstar">3.解压压缩包 :star::star::star::star:
+</h4><blockquote>
+<p>核心指定好压缩包名字和位置.</p>
+<p>默认解压到当前目录</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">tar  zxvf  /tmp/etc.tar.gz
+</span></span><span class="line"><span class="cl">tar  xf  /tmp/etc.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">x  extract   解压
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># tar  xf  /tmp/etc.tar.gz</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ls</span>
+</span></span><span class="line"><span class="cl">...  etc ...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ll etc</span>
+</span></span><span class="line"><span class="cl">total <span class="m">1496</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">3</span> root root     <span class="m">4096</span> Jan <span class="m">26</span>  <span class="m">2021</span> abrt
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root       <span class="m">16</span> Jan <span class="m">26</span>  <span class="m">2021</span> adjtime
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root     <span class="m">1529</span> Apr  <span class="m">1</span>  <span class="m">2020</span> aliases
+</span></span><span class="line"><span class="cl">.......
+</span></span><span class="line"><span class="cl">解压成功
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="4解压到指定目录starstarstarstar">4.解压到指定目录:star::star::star::star:
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">tar  xf  压缩包  -C  解压后的存放目录
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia tmp<span class="o">]</span><span class="c1"># tar xf etc.tar.gz -C /opt/</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia tmp<span class="o">]</span><span class="c1"># ls /opt/</span>
+</span></span><span class="line"><span class="cl">avalokita  bcm-agent  bsm-agent  etc  heyeAgent  knem-1.1.4.90mlnx1  mellanox  rh
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia tmp<span class="o">]</span><span class="c1"># </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="5tar从成员名中删除开头的">5.tar：从成员名中删除开头的“/”
+</h4><ul>
+<li>这是一个警告，可以忽略</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">tar: Removing leading <span class="sb">`</span>/<span class="sb">`</span> from member names
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>由来：</li>
+</ul>
+<ol>
+<li>这个是tar命令的安全保护机制。</li>
+<li>提示出现的原因，我们打包的目标目录或文件是绝对路径。</li>
+<li>为了防止压缩包中保留绝对路径，解压的时候可能发生覆盖，导致数据，配置丢失。</li>
+</ol>
+<ul>
+<li>如何避免提示：使用相对路径打包。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> /
+</span></span><span class="line"><span class="cl">tar  zcf    /tmp/etc.tar.gz    etc/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="6小结-1">6.小结
+</h4><ul>
+<li>
+<p>核心：tar创建，查看，解压，解压到指定目录</p>
+</li>
+<li>
+<p>zcf</p>
+<p>z  使用gzip进行压缩，压缩包以.tar.gz结尾</p>
+<pre><code>j  使用bzip2进行压缩，压缩包.tar.bz2
+</code></pre>
+<p>J  使用xz进行压缩，tar.xz</p>
+</li>
+<li>
+<p>tf  查看   无论什么格式，.tar.gz   tar.bz2    .tar.xz</p>
+</li>
+<li>
+<p>xf  解压     无论什么格式，.tar.gz   tar.bz2    .tar.xz</p>
+</li>
+<li>
+<p>-C  解压到指定目录</p>
+</li>
+</ul>
+<h3 id="3gzip">3.gzip
+</h3><ul>
+<li>
+<p>创建gz压缩包</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">touch   elysia.txt
+</span></span><span class="line"><span class="cl">gzip   elysia.txt
+</span></span><span class="line"><span class="cl">ll  elysia.txt.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>解压</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gzip  -d  elysia.txt.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4zipunzip">4.zip/unzip
+</h3></li>
+</ul>
+<blockquote>
+<p>专门处理.zip格式的压缩包 .tar无法处理.zip格式的压缩包。</p>
+<p>.zip格式是windows和linux共同支持格式。</p>
+<p>主要掌握，上传zip格式压缩包，在Linux系统里可以解压即可</p>
+</blockquote>
+<ul>
+<li>对于这个命令大部分会使用解压即可。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">压缩
+</span></span><span class="line"><span class="cl">zip  r  etc.zip   /etc/
+</span></span><span class="line"><span class="cl">-r  用于压缩目录
+</span></span><span class="line"><span class="cl">解压
+</span></span><span class="line"><span class="cl">unzip  etc.zip
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5小结">5.小结
+</h3><div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>压缩命令</th>
+<th>应用场景</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tar</td>
+<td>大部分使用tar即可，创建，查看，解压，解压到指定目录</td>
+<td>核心使用</td>
+</tr>
+<tr>
+<td>gzip</td>
+<td>一般配合其他命令使用</td>
+<td></td>
+</tr>
+<tr>
+<td>zip</td>
+<td>一般用于解压zip格式的压缩包unzip</td>
+<td>目前会使用unzip</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3总结-1">3.总结
+</h2><ul>
+<li>核心：熟练掌握ll  -hi每一列含义</li>
+<li>熟练掌握什么是inode和block</li>
+<li>熟练掌握常见的文件类型</li>
+<li>熟练掌握软硬链接区别⭐⭐⭐</li>
+<li>熟练掌握什么是mtime</li>
+<li>理解：一个基于软连接服务升级流程</li>
+<li>打包压缩：tar创建，查看，解压，解压到指定目录，unzip解压</li>
+<li>命令：==df==，file，==ln==，stat，==tar==，gzip，zip，==unzip，du==</li>
+</ul>
+
 </section>
 
 

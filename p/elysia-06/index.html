@@ -308,7 +308,7 @@
             <li><a href="#5多列排序">5&gt;多列排序</a></li>
           </ol>
         </li>
-        <li><a href="#52-uniq">5.2 uniq</a></li>
+        <li><a href="#52-uniq-去重">5.2 uniq 去重</a></li>
       </ol>
     </li>
     <li><a href="#6日期组合">6.日期组合</a>
@@ -592,6 +592,14 @@
 </span><span class="lnt">21
 </span><span class="lnt">22
 </span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># wc /etc/passwd</span>
@@ -602,6 +610,14 @@
 </span></span><span class="line"><span class="cl"> wc -l  文件      只查看行数
 </span></span><span class="line"><span class="cl"> <span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># wc -l /etc/passwd   只查看行数</span>
 </span></span><span class="line"><span class="cl"><span class="m">24</span> /etc/passwd
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ls /</span>
+</span></span><span class="line"><span class="cl">backup  boot  elysia  home  lib64       media  opt   root  sbin  sys  usr
+</span></span><span class="line"><span class="cl">bin     dev   etc     lib   lost+found  mnt    proc  run   srv   tmp  var
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@elysia ~<span class="o">]</span><span class="c1"># ls /|wc -l</span>
+</span></span><span class="line"><span class="cl"><span class="m">22</span>
+</span></span><span class="line"><span class="cl">统计文件个数
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">与其他命令配合 
@@ -1104,7 +1120,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div></blockquote>
-<h3 id="52-uniq">5.2 uniq
+<h3 id="52-uniq-去重">5.2 uniq 去重
 </h3><p>可以吧重复的合在一起</p>
 <blockquote>
 <p>用法示例</p>
